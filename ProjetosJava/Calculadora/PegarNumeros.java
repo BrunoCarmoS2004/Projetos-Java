@@ -6,10 +6,12 @@ public class PegarNumeros {
         int num = 1;
         float[] vetorNumeros;
         int resp = 1;
+        int i = 0;
         Scanner scanner = new Scanner(System.in);
     public void numeros(){
-        vetorNumeros = new float[num];
-        for (int i = 0; i < vetorNumeros.length; i++) {
+        //colocar o while aqui
+        for (i = 0; i < vetorNumeros.length; i++) {
+            vetorNumeros = new float[num];
             while (resp == 1){
             System.out.printf("Escreva o %d° numero: ",num);
             vetorNumeros[i] = scanner.nextFloat();

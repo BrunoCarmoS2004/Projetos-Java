@@ -6,9 +6,9 @@ public class MaisMenos {
         PegarNumeros numeros = new PegarNumeros();
         numeros.numeros();
         float total = 0;
-        for (int i = 0; i < numeros.num; i++) {
-            System.out.println(numeros.vetorNumeros[i]);
-            total += (float)numeros.vetorNumeros[i];
+        for (int i = 0; i < numeros.vetorNumeros.length; i++) {
+            numeros.vetorNumeros[i] += numeros.vetorNumeros[i];
+            total = numeros.vetorNumeros[i];
         }
         System.out.println(total);
     }
