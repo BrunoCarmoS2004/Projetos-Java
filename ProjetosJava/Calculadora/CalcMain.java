@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class CalcMain {
     
     public static void tabela(){
-        System.out.println(""
+        System.out.println("\n");
+        System.out.println("\n"
         +"|--------------------|\n"
         +"|    Calculadora     |\n"
         +"|--------------------|\n"
@@ -30,6 +31,7 @@ public class CalcMain {
             System.out.println("Escolha uma das opções acima escrevendo o Numero ou colocando o símbulo");
             System.out.print("Resposta: ");
             resp = scanner.next();
+            System.out.print("\n");
 
             MaisMenos mais = new MaisMenos();
             

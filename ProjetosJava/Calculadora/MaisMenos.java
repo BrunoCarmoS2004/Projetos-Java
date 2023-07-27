@@ -1,23 +1,32 @@
 package ProjetosJava.Calculadora;
 
 public class MaisMenos {
-    
+    PegarNumeros numeros = new PegarNumeros();
     public void mais(){
-        PegarNumeros numeros = new PegarNumeros();
+        
         numeros.numeros();
         float total = 0;
-        for (int i = 0; i < numeros.vetorNumeros.length; i++) {
-            total += numeros.vetorNumeros[i];
+        for (float number : numeros.banana) {
+            total += number;
         }
-        System.out.printf("A soma total dos numeros foi %d",total);
+        
+        System.out.printf("\nA soma total dos numeros foi %.2f\n",total);
     }
     public void menos(){
-        PegarNumeros numeros = new PegarNumeros();
+        int num = 1;
         numeros.numeros();
         float total = 0;
-        for (int i = 0; i < numeros.vetorNumeros.length; i++) {
-            total -= numeros.vetorNumeros[i];
+        for (float number : numeros.banana) {
+            if (num == 1){
+                total += number;
+                num++;
+            }else{
+                total -= number;
+                
+            }
+            
         }
-        System.out.printf("A soma total dos numeros foi %d",total);
+        System.out.printf("\nO resultado da conta foi %.2f\n",total);
     }
+    
 }

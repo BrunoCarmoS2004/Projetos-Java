@@ -1,25 +1,37 @@
 package ProjetosJava.Calculadora;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PegarNumeros {
-        int num = 1;
-        float[] vetorNumeros;
-        int resp = 1;
-        int i = 0,pato = 1;        
-        Scanner scanner = new Scanner(System.in);
+    int num = 1;
+    float number;
+    ArrayList<Float> banana;
     public void numeros(){
-            System.out.println("Quantos numeros vc vai querer usar?");
-            System.out.print("Resposta: ");
-            num = scanner.nextInt();
-            vetorNumeros = new float[num];
-       
-            for (i = 0; i < vetorNumeros.length; i++){
-                System.out.printf("Escreva o %d° numero: ",pato);
-                vetorNumeros[i] = scanner.nextFloat();
-                ++pato;
+
+        // Create an ArrayList to store the numbers
+        ArrayList<Float> numbers = new ArrayList<>();
+
+        // Prompt the user to enter numbers
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite qual quer numero. Digite apenas 0 para terminar\n");
+
+        // Loop until the user enters 0
+        while (true) {
+            // Get the user input
+            System.out.printf("Digite o %d° numero: ",num);
+            number = scanner.nextFloat();
+            num++;
+            // If the user enters 0, exit the loop
+            if (number == 0) {
+                break;
             }
+            // Add the number to the list
+            banana = numbers;
+            banana.add(number);
+            
         }
+    }
         
     }
 
