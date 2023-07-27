@@ -2,17 +2,22 @@ package ProjetosJava.Calculadora;
 
 public class MaisMenos {
     
-    public static void mais(){
+    public void mais(){
         PegarNumeros numeros = new PegarNumeros();
         numeros.numeros();
         float total = 0;
         for (int i = 0; i < numeros.vetorNumeros.length; i++) {
-            numeros.vetorNumeros[i] += numeros.vetorNumeros[i];
-            total = numeros.vetorNumeros[i];
+            total += numeros.vetorNumeros[i];
         }
-        System.out.println(total);
+        System.out.printf("A soma total dos numeros foi %d",total);
     }
-    public static void main(String[] args) {
-        mais();
+    public void menos(){
+        PegarNumeros numeros = new PegarNumeros();
+        numeros.numeros();
+        float total = 0;
+        for (int i = 0; i < numeros.vetorNumeros.length; i++) {
+            total -= numeros.vetorNumeros[i];
+        }
+        System.out.printf("A soma total dos numeros foi %d",total);
     }
 }

@@ -32,15 +32,14 @@ public class CalcMain {
             resp = scanner.next();
 
             MaisMenos mais = new MaisMenos();
-            MaisMenos menos = new MaisMenos();
-
+            
             if (resp.equals("1")|| resp.equals("+"))
             {
-                System.out.println("um");
+                mais.mais();
             }
             if (resp.equals("2")|| resp.equals("-"))
             {
-                System.out.println("dois");
+                mais.menos();
             }
             if (resp.equals("3")|| resp.equals("*"))
             {
