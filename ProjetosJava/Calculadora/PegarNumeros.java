@@ -7,12 +7,12 @@ public class PegarNumeros {
     int num = 1;
     float number;
     ArrayList<Float> banana;
-    public void numeros(int raiz){
+    public void numeros(int RaizEleve){
         ArrayList<Float> numbers = new ArrayList<>();
 
         
         Scanner scanner = new Scanner(System.in);
-        if (raiz == 0){
+        if (RaizEleve == 0){
             System.out.println("Digite qual quer numero. Digite apenas 0 para terminar\n");
             while (true) {
                 System.out.printf("Digite o %d° numero: ",num);
@@ -25,8 +25,8 @@ public class PegarNumeros {
                 banana.add(number);
                 
             }
-        }else if (raiz == 1){
-            System.out.println("Digite o numero para descobrir a raiz dele\n "); 
+        }else if (RaizEleve == 1){
+            System.out.println("Digite o numero para descobrir a RaizEleve dele\n "); 
             System.out.print("Digite o numero: ");
             while (num == 1){
                 number = scanner.nextFloat();

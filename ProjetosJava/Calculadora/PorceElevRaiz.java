@@ -4,8 +4,8 @@ public class PorceElevRaiz {
     PegarNumeros numeros = new PegarNumeros();
     public void porcen(){
         int num = 1;
-        int raiz = 0;
-        numeros.numeros(raiz);
+        int RaizEleve = 0;
+        numeros.numeros(RaizEleve);
         float total = 0;
         for (float number : numeros.banana) {
             if (num == 1){
@@ -24,8 +24,8 @@ public class PorceElevRaiz {
         
     public void eleve(){
         int num = 1;
-        int raiz = 2;
-        numeros.numeros(raiz);
+        int RaizEleve = 2;
+        numeros.numeros(RaizEleve);
         float total = 0;
         float aaa = 0;
         for (float number : numeros.banana) {
@@ -40,12 +40,12 @@ public class PorceElevRaiz {
             
         }
         System.out.printf("\nO resultado da conta foi %.2f\n",total);
-        raiz = 0;
+        RaizEleve = 0;
     }
     
     public void raiz(){
-        int raiz = 1;
-        numeros.numeros(raiz);
+        int RaizEleve = 1;
+        numeros.numeros(RaizEleve);
         float total = 0;
         float num = 0;
         int num2 = 0;
@@ -55,8 +55,8 @@ public class PorceElevRaiz {
                 total += number;
             }
             total = (float) Math.sqrt(total);
-            System.out.printf("\nA raiz do numero %.2f é: %.2f\n",num, total);
-            raiz = 0;
+            System.out.printf("\nA RaizEleve do numero %.2f é: %.2f\n",num, total);
+            RaizEleve = 0;
         }
         
     }

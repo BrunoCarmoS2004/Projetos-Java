@@ -4,8 +4,8 @@ public class VezesDivi {
     PegarNumeros numeros = new PegarNumeros();
     public void vezes(){
         int num = 1;
-        int raiz = 0;
-        numeros.numeros(raiz);
+        int RaizEleve = 0;
+        numeros.numeros(RaizEleve);
         float total = 0;
         for (float number : numeros.banana) {
             if (num == 1){
@@ -22,8 +22,8 @@ public class VezesDivi {
     }
     public void divi(){
         int num = 1;
-        int raiz = 0;
-        numeros.numeros(raiz);
+        int RaizEleve = 0;
+        numeros.numeros(RaizEleve);
         float total = 0;
         for (float number : numeros.banana) {
             if (num == 1){

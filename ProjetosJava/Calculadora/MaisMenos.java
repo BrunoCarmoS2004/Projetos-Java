@@ -3,8 +3,8 @@ package ProjetosJava.Calculadora;
 public class MaisMenos {
     PegarNumeros numeros = new PegarNumeros();
     public void mais(){
-        int raiz = 0;
-        numeros.numeros(raiz);
+        int RaizEleve = 0;
+        numeros.numeros(RaizEleve);
         float total = 0;
         for (float number : numeros.banana) {
             total += number;
@@ -14,8 +14,8 @@ public class MaisMenos {
     }
     public void menos(){
         int num = 1;
-        int raiz = 0;
-        numeros.numeros(raiz);
+        int RaizEleve = 0;
+        numeros.numeros(RaizEleve);
         float total = 0;
         for (float number : numeros.banana) {
             if (num == 1){
