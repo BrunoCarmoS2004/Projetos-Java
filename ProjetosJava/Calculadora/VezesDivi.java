@@ -2,6 +2,7 @@ package ProjetosJava.Calculadora;
 
 public class VezesDivi {
     PegarNumeros numeros = new PegarNumeros();
+    
     public void vezes(){
         int num = 1;
         int RaizEleve = 0;
@@ -13,13 +14,11 @@ public class VezesDivi {
                 num++;
             }else{
                 total *= number;
-                
             }
-            
         }
-        
         System.out.printf("\nO Resultado é %.2f\n",total);
     }
+
     public void divi(){
         int num = 1;
         int RaizEleve = 0;
@@ -31,12 +30,8 @@ public class VezesDivi {
                 num++;
             }else{
                 total /= number;
-                
             }
-            
         }
-        
         System.out.printf("\nO Resultado é %.2f\n",total);
     }
-    
 }

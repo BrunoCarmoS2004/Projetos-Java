@@ -9,8 +9,6 @@ public class PegarNumeros {
     ArrayList<Float> banana;
     public void numeros(int RaizEleve){
         ArrayList<Float> numbers = new ArrayList<>();
-
-        
         Scanner scanner = new Scanner(System.in);
         if (RaizEleve == 0){
             System.out.println("Digite qual quer numero. Digite apenas 0 para terminar\n");
@@ -23,7 +21,6 @@ public class PegarNumeros {
                 }
                 banana = numbers;
                 banana.add(number);
-                
             }
         }else if (RaizEleve == 1){
             System.out.println("Digite o numero para descobrir a RaizEleve dele\n "); 
