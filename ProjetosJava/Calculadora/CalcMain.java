@@ -22,48 +22,51 @@ public class CalcMain {
         +"|--------------------|\n");
     }
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        String resp = "0";
-        
-        while(!resp.equals("8") && !resp.equals("Sair") && !resp.equals("sair") && !resp.equals("SAIR"))
-        {
-            tabela();
-            System.out.println("Escolha uma das opções acima escrevendo o Numero ou colocando o símbulo");
-            System.out.print("Resposta: ");
-            resp = scanner.next();
-            System.out.print("\n");
-
-            MaisMenos mais = new MaisMenos();
+       Scanner scanner = new Scanner(System.in);
+            String resp = "0";
             
-            if (resp.equals("1")|| resp.equals("+"))
+            while(!resp.equals("8") && !resp.equals("Sair") && !resp.equals("sair") && !resp.equals("SAIR"))
             {
-                mais.mais();
-            }
-            if (resp.equals("2")|| resp.equals("-"))
-            {
-                mais.menos();
-            }
-            if (resp.equals("3")|| resp.equals("*"))
-            {
-                System.out.println("tres");
-            }
-            if (resp.equals("4")|| resp.equals("/"))
-            {
-                System.out.println("quatro");
-            }
-            if (resp.equals("5")|| resp.equals("√"))
-            {
-                System.out.println("crinco");
-            }
-            if (resp.equals("6")|| resp.equals("^"))
-            {
-                System.out.println("seis");
-            }
-            if (resp.equals("7")|| resp.equals("%"))
-            {
-                System.out.println("sete");
-            }
+                tabela();
+                System.out.println("Escolha uma das opções acima escrevendo o Numero ou colocando o símbulo");
+                System.out.print("Resposta: ");
+                resp = scanner.next();
+                System.out.print("\n");
 
+                MaisMenos MaisMenos = new MaisMenos();
+                PorceElevRaiz PorceElevRaiz = new PorceElevRaiz();
+                VezesDivi VezesDivi = new VezesDivi();
+                
+                if (resp.equals("1")|| resp.equals("+"))
+                {
+                    MaisMenos.mais();
+                }
+                if (resp.equals("2")|| resp.equals("-"))
+                {
+                    MaisMenos.menos();
+                }
+                if (resp.equals("3")|| resp.equals("*"))
+                {
+                    VezesDivi.vezes();
+                }
+                if (resp.equals("4")|| resp.equals("/"))
+                {
+                    VezesDivi.divi();
+                }
+                if (resp.equals("5")|| resp.equals("√"))
+                {
+                    PorceElevRaiz.raiz();
+                }
+                if (resp.equals("6")|| resp.equals("^"))
+                {
+                    PorceElevRaiz.eleve();
+                }
+                if (resp.equals("7")|| resp.equals("%"))
+                {
+                    PorceElevRaiz.porcen();
+                }
+
+            
         }
     }
 
