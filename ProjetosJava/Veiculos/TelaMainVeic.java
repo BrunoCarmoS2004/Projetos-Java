@@ -5,9 +5,16 @@ import java.util.Scanner;
 public class TelaMainVeic {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
         int num1 = 5;
         int escolha1 = 5;
         int escolha2 = 5;
+        int vel = 70;
+        String nome = "";
+        String marca= "";
+        String cor= "";
+        int rodas = 4;
+        Veiculos v1 = new Veiculos(vel, nome, marca, cor, rodas);
         System.out.println("Bem vindo a garagem C-137");
         System.out.println("Aqui você poderam adicionar, modificar, excluir e apostar corrida com carros, motos, aviões ou barcos!");
         System.out.println("Escolha uma das opções da tebela abaixo");
@@ -30,6 +37,7 @@ public class TelaMainVeic {
                     escolha2 = scanner.nextInt();
                     if(escolha2 == 1){
                         //Adicionar carros;
+                        Carros.setVel(10);
                     }else if(escolha1 == 2){
                         //Modificar carro
                     }else if(escolha1 == 3){
