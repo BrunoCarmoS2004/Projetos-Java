@@ -49,11 +49,11 @@ public class TelaMainVeic {
                         respCor = scanner.next();
                         System.out.print("Agora digite o estilo do carro 1 = Hetch, 2 = Sedan, 3 = SUV: \n");
                         respHetsed = scanner.nextInt();
-                        if(respVel == 1){
+                        if(respHetsed == 1){
                             respStilo="Hetch";
-                        }else if(respVel == 2){
+                        }else if(respHetsed == 2){
                             respStilo = "Sedan";
-                        }else if(respVel == 3){
+                        }else if(respHetsed == 3){
                             respStilo = "SUV";
                         }else{
                             respStilo= "Não Especificado";
