@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class TelaMainVeic {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        int escolha1 = 5, escolha2 = 5, respVel, respRodas, respPortas, respHetsed;
+        int escolha1 = 5, escolha2 = 5, respVel, respRodas, respPortas, respHetsed, respCilin,respBool;
         String respNome, respCor, respMarca, respStilo;
         float respZerocem;
+        boolean respGrau = true, respBarul= true;
 
 
 
 
         System.out.println("Bem vindo a garagem C-137");
-        System.out.println("Aqui você poderam adicionar, modificar, excluir e apostar corrida com carros, motos, aviões ou barcos!");
+        System.out.println("Aqui você poderam adicionar, carros, motos, aviões ou barcos!");
         System.out.println("Escolha uma das opções da tebela abaixo");
         while (escolha1 !=0 ){
             System.out.println("----------\n"
@@ -29,9 +29,6 @@ public class TelaMainVeic {
                 case 1:
                 while(true){
                     System.out.println("1 - Adicionar Carro\n"
-                    +"2 - Modificar Carro\n"
-                    +"3 - Excluir Carro\n"
-                    +"4 - Apostar Corrida entre os carros\n"
                     +"0 - Voltar\n");
                     escolha2 = scanner.nextInt();
                     if(escolha2 == 1){
@@ -71,12 +68,53 @@ public class TelaMainVeic {
                         Carros carro1 = new Carros(respVel, respNome, respMarca, respCor, respRodas, respPortas, respStilo, respZerocem);
                         System.out.println("As informações do carro são: ");
                         carro1.info();
-                    }else if(escolha1 == 2){
-                        //Modificar carro
-                    }else if(escolha1 == 3){
-                        //Excluir carro
-                    }else if(escolha1 == 4){
-                        //Corrida
+                    }else if(escolha1 == 0){
+                        break;
+                    }
+                }
+                case 2:
+                while(true){
+                    System.out.println("1 - Adicionar Moto\n"
+                    +"0 - Voltar\n");
+                    escolha2 = scanner.nextInt();
+                    if(escolha2 == 1){
+                        //Adicionar carros;
+                        System.out.print("Digite o nome da Moto: \n");
+                        respNome = scanner.next();
+                        System.out.println("Pronto");
+                        System.out.print("Digite a Cilindrada da Moto: \n");
+                        respCilin = scanner.nextInt();
+                        System.out.println("Pronto");
+                        System.out.print("Agora digite a velocidade: \n");
+                        respVel = scanner.nextInt();
+                        System.out.println("Pronto");
+                        System.out.print("Agora digite a Marca da Moto: \n");
+                        respMarca = scanner.next();
+                        System.out.println("Pronto");
+                        System.out.print("Agora digite a Cor da Moto: \n");
+                        respCor = scanner.next();
+                        System.out.print("Agora digite se a Moto da Grau: 1-Sim, 2-Não\n");
+                        respBool = scanner.nextInt();
+                        if(respBool == 1){
+                            respGrau=true;
+                        }else if(respBool == 2){
+                            respGrau = false;
+                        }
+                        System.out.println("Pronto");
+                        System.out.print("Agora digite a quantidade de rodas da Moto: \n");
+                        respRodas = scanner.nextInt();
+                        System.out.println("Pronto");
+                        System.out.print("Agora digite se a Moto faz barulho: 1-Sim, 2-Não\n");
+                        respBool = scanner.nextInt();
+                        if(respBool == 1){
+                            respBarul= true;
+                        }else if(respBool == 2){
+                            respBarul = false;
+                        }
+                        System.out.println("Pronto");
+                        Motos moto1 = new Motos(respVel, respNome, respMarca, respCor, respRodas, respCilin, respBarul, respGrau);
+                        System.out.println("As informações da Moto são: ");
+                        moto1.info();
                     }else if(escolha1 == 0){
                         break;
                     }
