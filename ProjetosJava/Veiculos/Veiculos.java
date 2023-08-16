@@ -2,8 +2,18 @@ package ProjetosJava.Veiculos;
 
 
 public class Veiculos {
-    private int vel, rodas;
+    // S = SEM, C = COM
+    // S = SEM, C = COM
+    // S = SEM, C = COM
+    private int vel, rodas, tamanho;
     private String nome, marca, cor;
+    private boolean motorTipo = true;
+    public Veiculos(int vel, int tamanho, String nome, String cor) {
+        this.vel = vel;
+        this.tamanho = tamanho;
+        this.nome = nome;
+        this.cor = cor;
+    }
     public Veiculos(int vel, String nome, String marca, String cor, int rodas) {
         this.vel = vel;
         this.nome = nome;
@@ -48,12 +58,26 @@ public class Veiculos {
         this.rodas = rodas;
     }
 
-    public void info(){
+    public void infoAll(){
         System.out.println("---------------------");
         System.out.printf("Nome: %s%n",this.nome);
-        System.out.printf("Velocidade: %d%n",this.vel);
+        System.out.printf("Velocidade: %d Km/h%n",this.vel);
         System.out.printf("Marca: %s%n",this.marca);
         System.out.printf("Rodas: %d%n",this.rodas);
+        System.out.printf("Cor: %s%n",this.cor);
+    }
+    public void infoSrodas(){
+        System.out.println("---------------------");
+        System.out.printf("Nome: %s%n",this.nome);
+        System.out.printf("Velocidade: %d Km/h%n",this.vel);
+        System.out.printf("Marca: %s%n",this.marca);
+        System.out.printf("Cor: %s%n",this.cor);
+    }
+    public void infoCtamanhoSmarca(){
+        System.out.println("---------------------");
+        System.out.printf("Nome: %s%n",this.nome);
+        System.out.printf("Velocidade: %d Km/h%n",this.vel);
+        System.out.printf("Tamanho: %d metros%n",this.tamanho);
         System.out.printf("Cor: %s%n",this.cor);
     }
 }

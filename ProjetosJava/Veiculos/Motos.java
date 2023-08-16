@@ -32,7 +32,7 @@ public class Motos extends Veiculos {
     }
 
     public void info(){
-        super.info();
+        super.infoSrodas();
         System.out.printf("%d Cilindadas\n", cilin);
         System.out.print("Faz barulho? ");
         System.out.println(barul ?"Sim": "Não");
@@ -40,5 +40,7 @@ public class Motos extends Veiculos {
         System.out.println(grau ?"Sim": "Não");
         System.out.println();
     }
-    
+    public void batida(){
+        //fazer funcionalidade de ter chance de bater o carro
+    }
 }

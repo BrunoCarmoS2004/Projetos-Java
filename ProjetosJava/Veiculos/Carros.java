@@ -30,11 +30,13 @@ public class Carros extends Veiculos {
     }
 
     public void info(){
-        super.info();
+        super.infoAll();
         System.out.printf("Portas: %d%n",this.portas);
         System.out.printf("Estilo: %s%n",this.hetsed);
         System.out.printf("De zero a Cem: %.2f segundos%n",this.zerocem);
         System.out.println("---------------------------");
     }
-    
+    public void corrida(){
+        //fazer funcionalidade multiplayer
+    }
 }
