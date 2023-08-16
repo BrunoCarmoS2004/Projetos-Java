@@ -101,9 +101,6 @@ public class TelaMainVeic {
                             respGrau = false;
                         }
                         System.out.println("Pronto");
-                        System.out.print("Agora digite a quantidade de rodas da Moto: \n");
-                        respRodas = scanner.nextInt();
-                        System.out.println("Pronto");
                         System.out.print("Agora digite se a Moto faz barulho: 1-Sim, 2-Não\n");
                         respBool = scanner.nextInt();
                         if(respBool == 1){
@@ -112,7 +109,7 @@ public class TelaMainVeic {
                             respBarul = false;
                         }
                         System.out.println("Pronto");
-                        Motos moto1 = new Motos(respVel, respNome, respMarca, respCor, respRodas, respCilin, respBarul, respGrau);
+                        Motos moto1 = new Motos(respVel, respNome, respMarca, respCor, respCilin, respBarul, respGrau);
                         System.out.println("As informações da Moto são: ");
                         moto1.info();
                     }else if(escolha1 == 0){

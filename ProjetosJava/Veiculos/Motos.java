@@ -6,8 +6,8 @@ public class Motos extends Veiculos {
     private int cilin;
     private boolean barul;
     private boolean grau;
-    public Motos(int vel, String nome, String marca, String cor, int rodas, int cilin, boolean barul, boolean grau) {
-        super(vel, nome, marca, cor, rodas);
+    public Motos(int vel, String nome, String marca, String cor, int cilin, boolean barul, boolean grau) {
+        super(vel, nome, marca, cor);
         this.barul= barul;
         this.cilin=cilin;
         this.grau=grau;

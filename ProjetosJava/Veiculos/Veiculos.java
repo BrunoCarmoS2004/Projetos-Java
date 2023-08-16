@@ -11,6 +11,12 @@ public class Veiculos {
         this.cor = cor;
         this.rodas = rodas;
     }
+    public Veiculos(int vel, String nome, String marca, String cor) {
+        this.vel = vel;
+        this.nome = nome;
+        this.marca = marca;
+        this.cor = cor;
+    }
     public int getVel() {
         return vel;
     }
