@@ -8,9 +8,9 @@ public class Motos extends Veiculos {
     private boolean grau;
     public Motos(int vel, String nome, String marca, String cor, int cilin, boolean barul, boolean grau) {
         super(vel, nome, marca, cor);
-        this.barul= barul;
-        this.cilin=cilin;
-        this.grau=grau;
+        this.barul = barul;
+        this.cilin = cilin;
+        this.grau = grau;
     }
     public int getCilin() {
         return cilin;
