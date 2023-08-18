@@ -7,7 +7,7 @@ public class Veiculos {
     // S = SEM, C = COM
     private int vel, rodas, tamanho;
     private String nome, marca, cor;
-    private boolean motorTipo = true;
+
     public Veiculos(int vel, int tamanho, String nome, String cor) {
         this.vel = vel;
         this.tamanho = tamanho;
@@ -79,5 +79,8 @@ public class Veiculos {
         System.out.printf("Velocidade: %d Km/h%n",this.vel);
         System.out.printf("Tamanho: %d metros%n",this.tamanho);
         System.out.printf("Cor: %s%n",this.cor);
+    }
+    public void corrida(){
+      
     }
 }

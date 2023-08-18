@@ -36,6 +36,7 @@ public class Carros extends Veiculos {
         System.out.printf("De zero a Cem: %.2f segundos%n",this.zerocem);
         System.out.println("---------------------------");
     }
+    @Override
     public void corrida(){
         //fazer funcionalidade multiplayer
     }
