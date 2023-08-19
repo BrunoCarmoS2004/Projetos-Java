@@ -124,7 +124,7 @@ public class TelaMainVeic {
 //AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO
                 case 2:
                     //AVIÃO
-                    System.out.println("Digite a quantidade de carros que deseja adicionar");
+                    System.out.println("Digite a quantidade de aviões que deseja adicionar");
                     respTamVet = scanner.nextInt();
                     Aviao[] aviao1 = new Aviao[respTamVet];
                         //Adicionar barcos;
