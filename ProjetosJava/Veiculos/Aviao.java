@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class Aviao extends Veiculos{
     Random random = new Random();
-    private int asas, lugares;
+    private int asas, lugares, gasolina, pessoas;
     private float maxAltura;
     private boolean motorTipo;
-    private int gasolina;
+   
 
     
     
@@ -19,7 +19,8 @@ public class Aviao extends Veiculos{
         this.lugares=lugares;
         this.maxAltura=maxAltura;
         this.motorTipo=motorTipo;
-        this.gasolina = random.nextInt(151) + 100;
+        this.gasolina = random.nextInt(1) + 250;
+        this.pessoas = random.nextInt(this.lugares);
     }
     public int getAsas() {
         return asas;
@@ -61,6 +62,7 @@ public class Aviao extends Veiculos{
     public int getGasolina() {
         return gasolina;
     }
-    
-    
+    public int getPessoas() {
+        return pessoas;
+    }
 }

@@ -14,11 +14,11 @@ public class TelaMainVeic {
 
 
         Scanner scanner = new Scanner(System.in);
-        int escolha1 = 5, escolha2 = 5, escolha3 = 5, respVel, respRodas, respPortas, respHetsed, respCilin, respBool, respCap, respTam, respAsas, respLugares, respTamVet, corridaVel = 0, n=1, corridaAleat, respCidade, respAviao;
+        int i= 0, escolha1 = 5, escolha2 = 5, escolha3 = 5, respVel, respRodas, respPortas, respHetsed, respBool, respTam, respAsas, respLugares, respTamVet, corridaVel = 0, n=1, corridaAleat, respCidade, respId, respCapacidade = 0, dinheiro = 0, numPeixes = 0, qtdPeixes =0, pescaAleat;
         String respNome, respCor, respMarca, respStilo, corridaNome = "";
         float respZerocem, respMaxAltura;
-        int i = 0;
-        boolean respGrau = true, respBarul= true, respMotorTipo = true;
+        boolean respMotorTipo = true;
+        int[] capacidade1;
         
 
 
@@ -172,7 +172,7 @@ public class TelaMainVeic {
                                 case 1:
                                 n=1;
                                     for( i = 0; i< aviao1.length; i++){
-                                        System.out.println("As informações dos aviões "+n+" são: ");
+                                        System.out.println("As informações dos aviões "+--n+" são: ");
                                         n++;
                                         aviao1[i].info();
                                         System.out.println();
@@ -182,72 +182,181 @@ public class TelaMainVeic {
                                     System.out.println("Escolha o ID de um dos aviões: ");
                                     n = 0;
                                     for (i=0; i<aviao1.length; i ++){
-                                        System.out.printf("Id: %d",n );
+                                        System.out.printf("Id: %d - ",n );
                                         System.out.println(aviao1[i].getNome());
-                                        System.out.println(aviao1[i].getGasolina());
+                                        System.out.println("Gasolina: "+ aviao1[i].getGasolina());
+                                        System.out.println();
                                         n++;
                                     }
-                                    respAviao = scanner.nextInt();
+                                    respId = scanner.nextInt();
                                     System.out.println();
                                     System.out.println();
                                     System.out.println("Agora escolha a cidade: ");
-                                    System.out.println("1 - Rio de Janeiro\n"
-                                    +"2 - São Paulo\n"
-                                    +"3 - Rio Branco (Acre)\n"
-                                    +"4 - Belo Horizonte\n");
+                                    System.out.println("1 - São Pauloo\n"
+                                    +"2 - Rio de Janeiro\n"
+                                    +"3 - Belo Horizonte\n"
+                                    +"4 - Rio Branco (Acre)\n");
                                     respCidade = scanner.nextInt();
-                                    if(respCidade == 1)
+                                    if(respCidade == 1 && aviao1[respId].getGasolina() >= 250){
+                                        System.out.println("\nParabéns o avião"+aviao1[respId].getNome()+" Chegou em São Paulo\n");
+                                    }else if (respCidade == 1 && aviao1[respId].getGasolina() < 250){
+                                        System.out.println("\nNão faço a minima ideia de como, mas ele caiu!\n");
+                                        System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
+                                    }
+                                    else if(respCidade == 2 && aviao1[respId].getGasolina() >= 188){
+                                        System.out.println("\nParabéns o avião"+aviao1[respId].getNome()+" Chegou no Rio de Janeiro\n");
+                                    }else if (respCidade == 2 && aviao1[respId].getGasolina() < 180){
+                                        System.out.println("\nInfelizmente, por causas aleatórias o avião não chegou no Rio de Janeiro(Ele caiu :()\n");
+                                        System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
+                                    }
+                                    else if(respCidade == 3 && aviao1[respId].getGasolina() >= 126){
+                                        System.out.println("\nParabéns o avião"+aviao1[respId].getNome()+" Chegou em Belo Horizonte\n");
+                                    }else if (respCidade == 3 && aviao1[respId].getGasolina() < 126){
+                                        System.out.println("\nInfelizmente, por causas aleatórias a compania esqueceu de abastecer o avião e vc ja sabe o resto...\n");
+                                        System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
+                                    }
+                                    else if(respCidade == 4 && aviao1[respId].getGasolina() >= 64){
+                                        System.out.println("\nParabéns o avião "+aviao1[respId].getNome()+" Chegou na Ilha do Jurassic Park Rio Branco(ACRE)\n");
+                                    }else if (respCidade == 4 && aviao1[respId].getGasolina() < 64){
+                                        System.out.println("\nInfelizmente, por causas aleatórias(Um Pterodáctilo) o avião caiu, isso que da ser rico e ir querer ir desbravar uma ilha de dinossauros!\n");
+                                        System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
+                                    }
                                     break;
                             }  
                             if (escolha3 == 0){
                                 break;
                             }
-                            
                         }   
-                        
                     break;
 
-
-
-
                 case 3:
-                while(true){
-                    System.out.println("1 - Adicionar Barco\n"
-                    +"0 - Voltar\n");
-                    escolha2 = scanner.nextInt();
-                    if(escolha2 == 1){
-                        //Adicionar barcos;
-                        System.out.print("Digite o nome do barco: \n");
-                        respNome = scanner.next();
-                        System.out.println("Pronto");
-                        System.out.print("Digite a Capacidade do barco: \n");
-                        respCap = scanner.nextInt();
-                        System.out.println("Pronto");
-                        System.out.print("Agora digite a velocidade: \n");
-                        respVel = scanner.nextInt();
-                        System.out.println("Pronto");
-                        System.out.print("Agora digite o tamanho do barco: \n");
-                        respTam = scanner.nextInt();
-                        System.out.println("Pronto");
-                        System.out.print("Agora digite a Cor do barco: \n");
-                        respCor = scanner.next();
-                        System.out.print("Agora digite o tipo de locomoção do barco: 1-Motor, 2-Vela\n");
-                        respBool = scanner.nextInt();
-                        if(respBool == 1){
-                            respMotorTipo=true;
-                        }else if(respBool == 2){
-                            respMotorTipo = false;
+                System.out.println("Digite a quantidade de barcos que deseja adicionar");
+                respTamVet = scanner.nextInt();
+                Barco[] barco1 = new Barco[respTamVet];
+                capacidade1 = new int[respTamVet];
+                //Adicionar barcos;
+                for (i = 0; i < barco1.length; i++) {
+                    System.out.print("Digite o nome do barco: \n");
+                    respNome = scanner.next();
+                    System.out.println("Pronto");
+                    System.out.print("Digite a capacidade de carga do barco: \n");
+                    respCapacidade = scanner.nextInt();
+                    capacidade1[i] = respCapacidade;
+                    System.out.println("Pronto");
+                    System.out.print("Agora digite a velocidade: \n");
+                    respVel = scanner.nextInt();
+                    System.out.println("Pronto");
+                    System.out.print("Agora digite o tamanho do barco: \n");
+                    respTam = scanner.nextInt();
+                    System.out.println("Pronto");
+                    System.out.print("Agora digite a Cor do barco: \n");
+                    respCor = scanner.next();
+                    System.out.println("Pronto");
+                    System.out.print("Agora digite o tipo de locomoção do barco: 1-Motor, 2-Vela\n");
+                    respBool = scanner.nextInt();
+                    if(respBool == 1){
+                        respMotorTipo=true;
+                    }else if(respBool == 2){
+                        respMotorTipo = false;
+                    }
+                    System.out.println("Pronto");
+                    barco1[i] = new Barco(respVel, respTam, respNome, respCor, respCapacidade, respMotorTipo, dinheiro);
+                    barco1[i].setCapacidade(respCapacidade);
+                }
+                while (true){
+                    System.out.println("1 - Mostrar informações dos barcos\n"
+                    +"2 - Pescar em alto mar\n"
+                    +"0 - Voltar/Reiniciar barcos\n");
+                    System.out.print("Escolha uma das opções a cima: ");
+                    escolha3 = scanner.nextInt();
+                    System.out.println();
+                    switch(escolha3){
+                        case 1: 
+                            for(i=0;i<barco1.length; i++){
+                                System.out.println("As informações dos barcos "+--n+" são: ");
+                                n++;
+                                barco1[i].info();
+                                System.out.println();
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Escolha o ID de um dos barcos: ");
+                            n = 0;
+                            for (i=0; i<barco1.length; i ++){
+                                System.out.printf("Id: %d - ",n );
+                                System.out.println(barco1[i].getNome());
+                                System.out.println("Capacidade: "+ barco1[i].getCapacidade());
+                                System.out.println();
+                                n++;
                         }
-                        System.out.println("Pronto");
-                        Barco barco1 = new Barco(respVel, respTam, respNome, respCor, respCap, respMotorTipo);
-                        System.out.println("As informações do barco são: ");
-                        barco1.info();
-                    }else if(escolha2 == 0){
+                        respId = scanner.nextInt();
+                            System.out.println("\nVocê esta no em alto mar\n");
+                            qtdPeixes = 0;
+                            for (i = 0; i < capacidade1[respId]; i++) {
+                                numPeixes = 0;
+                                pescaAleat = random.nextInt(250);
+                                if(pescaAleat <= 50 && barco1[respId].getCapacidade() >=1){
+                                    qtdPeixes +=1;
+                                    numPeixes +=1;
+                                    barco1[respId].setCapacidade(barco1[respId].getCapacidade() - numPeixes);
+                                }
+                            }
+
+                             
+                            barco1[respId].setCapacidade(barco1[respId].getCapacidade() - qtdPeixes);
+                            System.out.println("\nParabéns você pegou "+qtdPeixes+" peixe(s) bem grande(s)!\n");
+                            while(true){
+                                
+                                System.out.println("\nO que deseja fazer agora?\n");
+                                System.out.println("1 - Vender os peixes\n"
+                                +"2 - Pescar mais\n"
+                                +"3 - Ver informações do barco\n"
+                                +"0 - Voltar");
+                                escolha2 = scanner.nextInt();
+                                
+                                if (escolha2 == 1){
+                                    dinheiro += qtdPeixes * 13;
+                                    barco1[respId].setDinheiro(dinheiro);
+                                    System.out.println("Voce vendeu tudo e ganhou R$ "+dinheiro);
+                                }
+                                else if(escolha2 == 2){
+                                    if(barco1[respId].getCapacidade() <= 0){
+                                        System.out.println("Você não tem espaço sufiente");
+                                    }else{
+                                        System.out.println("\nVocê esta no em alto mar\n");
+                                        qtdPeixes = 0;
+                                        for (i = 0; i < capacidade1[respId]; i++) {
+                                            numPeixes = 0;
+                                            pescaAleat = random.nextInt(250);
+                                            if(pescaAleat <= 50 && barco1[respId].getCapacidade() >=1){
+                                                qtdPeixes +=1;
+                                                numPeixes +=1;
+                                                barco1[respId].setCapacidade(barco1[respId].getCapacidade() - numPeixes);
+
+                                            }
+                                        }
+                                        System.out.println("\nParabéns você pegou "+qtdPeixes+" peixe(s) bem grande(s)!\n");
+                                    }
+                                }else if(escolha2 == 3){
+                                    for(i=0;i<1; i++){
+                                        System.out.println("As informações dos barcos "+--n+" são: ");
+                                        n++;
+                                        barco1[i].info();
+                                        System.out.println();
+                                    }
+                                }
+                                else if (escolha2 == 0){
+                                    break;
+                                }
+                            }
+                    }   
+                    if (escolha3 == 0){
                         break;
                     }
                 }
                 break;
-            } 
-        }
     }
 }
+    }
+}
+    
