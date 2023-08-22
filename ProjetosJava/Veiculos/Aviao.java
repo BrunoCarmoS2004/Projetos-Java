@@ -19,7 +19,7 @@ public class Aviao extends Veiculos{
         this.lugares=lugares;
         this.maxAltura=maxAltura;
         this.motorTipo=motorTipo;
-        this.gasolina = random.nextInt(1) + 250;
+        this.gasolina = random.nextInt(65) + 250;
         this.pessoas = random.nextInt(this.lugares);
     }
     public int getAsas() {
@@ -55,9 +55,6 @@ public class Aviao extends Veiculos{
         System.out.println("Altura maxima: %.2f metros");
         System.out.printf("Quantidade de gasolina do avião: %d mil litros%n",this.gasolina);
         System.out.println();
-    }
-    public void corrida(){
-        //fazer funcionalidade voar chance de gasolina acabar
     }
     public int getGasolina() {
         return gasolina;

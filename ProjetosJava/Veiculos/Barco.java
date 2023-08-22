@@ -34,7 +34,4 @@ public class Barco extends Veiculos {
         System.out.println(this.motorTipo ?"Motor": "Vela");
         System.out.printf("dinheiro: R$ %d\n", this.dinheiro);
     }
-    public void pescar(){
-        //fazer funcionalidade de pescar
-    }
 }

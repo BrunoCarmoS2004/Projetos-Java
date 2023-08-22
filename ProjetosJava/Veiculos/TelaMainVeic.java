@@ -9,7 +9,9 @@ public class TelaMainVeic {
 
         https://www.youtube.com/watch?v=Y3wcF_Sobrk 
         
-        Adaptei TOTALMENTE para meu código, se vc não considerar isso, pelo menos considere que antes de ter o vetor eu ja tinha feito TUDO do jeito padrão sem vetor*/
+        Adaptei TOTALMENTE para meu código, se vc não considerar isso, pelo menos considere que antes de ter o vetor eu ja tinha feito TUDO do jeito padrão sem vetor
+        
+         As funcionalidades de Corrida, Voar, Pescar não estão nas classes por que ainda não descobri/não tive tempo de como chamar o objeto VETOR da main nas classes*/
 
 
 
@@ -95,7 +97,7 @@ public class TelaMainVeic {
                                 break;
                             case 2:
                                 for (i = 0; i < carro1.length; i++) {
-                                    corridaAleat = random.nextInt(10);
+                                    corridaAleat = random.nextInt(20);
                                     if(carro1[i].getVel()>corridaVel){
                                         corridaVel = carro1[i].getVel();
                                         corridaNome = carro1[i].getNome();
@@ -185,31 +187,31 @@ public class TelaMainVeic {
                                     +"3 - Belo Horizonte\n"
                                     +"4 - Rio Branco (Acre)\n");
                                     respCidade = scanner.nextInt();
-                                    if(respCidade == 1 && aviao1[respId].getGasolina() >= 250){
+                                    if(respCidade == 1 && aviao1[respId].getGasolina() >= 64){
                                         System.out.println("\nParabéns o avião"+aviao1[respId].getNome()+" Chegou em São Paulo\n");
                                     }
-                                    else if (respCidade == 1 && aviao1[respId].getGasolina() < 250){
+                                    else if (respCidade == 1 && aviao1[respId].getGasolina() < 64){
                                         System.out.println("\nNão faço a minima ideia de como, mas ele caiu!\n");
                                         System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
                                     }
-                                    else if(respCidade == 2 && aviao1[respId].getGasolina() >= 188){
+                                    else if(respCidade == 2 && aviao1[respId].getGasolina() >= 126){
                                         System.out.println("\nParabéns o avião"+aviao1[respId].getNome()+" Chegou no Rio de Janeiro\n");
                                     }
-                                    else if (respCidade == 2 && aviao1[respId].getGasolina() < 180){
+                                    else if (respCidade == 2 && aviao1[respId].getGasolina() < 126){
                                         System.out.println("\nInfelizmente, por causas aleatórias o avião não chegou no Rio de Janeiro(Ele caiu :()\n");
                                         System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
                                     }
-                                    else if(respCidade == 3 && aviao1[respId].getGasolina() >= 126){
+                                    else if(respCidade == 3 && aviao1[respId].getGasolina() >= 188){
                                         System.out.println("\nParabéns o avião"+aviao1[respId].getNome()+" Chegou em Belo Horizonte\n");
                                     }
-                                    else if (respCidade == 3 && aviao1[respId].getGasolina() < 126){
+                                    else if (respCidade == 3 && aviao1[respId].getGasolina() < 188){
                                         System.out.println("\nInfelizmente, por causas aleatórias a compania esqueceu de abastecer o avião e vc ja sabe o resto...\n");
                                         System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
                                     }
-                                    else if(respCidade == 4 && aviao1[respId].getGasolina() >= 64){
+                                    else if(respCidade == 4 && aviao1[respId].getGasolina() >= 230){
                                         System.out.println("\nParabéns o avião "+aviao1[respId].getNome()+" Chegou na Ilha do Jurassic Park Rio Branco(ACRE)\n");
                                     }
-                                    else if (respCidade == 4 && aviao1[respId].getGasolina() < 64){
+                                    else if (respCidade == 4 && aviao1[respId].getGasolina() < 230){
                                         System.out.println("\nInfelizmente, por causas aleatórias(Um Pterodáctilo) o avião caiu, isso que da ser rico e ir querer ir desbravar uma ilha de dinossauros!\n");
                                         System.out.println("\nUm total de "+aviao1[respId].getPessoas()+" morreram, parabens por usas escolhas\n");
                                     }
