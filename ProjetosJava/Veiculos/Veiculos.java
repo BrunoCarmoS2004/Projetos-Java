@@ -80,7 +80,4 @@ public class Veiculos {
         System.out.printf("Tamanho: %d metros%n",this.tamanho);
         System.out.printf("Cor: %s%n",this.cor);
     }
-    public void corrida(){
-      
-    }
 }

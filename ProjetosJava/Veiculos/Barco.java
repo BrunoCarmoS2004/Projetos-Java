@@ -21,14 +21,12 @@ public class Barco extends Veiculos {
     public void setMotorTipo(boolean motorTipo) {
         this.motorTipo = motorTipo;
     }
-
     public int getDinheiro() {
         return dinheiro;
     }
     public void setDinheiro(int dinheiro) {
         this.dinheiro = dinheiro;
     }
-    
     public void info(){
         super.infoCtamanhoSmarca();
         System.out.printf("Capacidade: %d unidades\n", this.capacidade);
@@ -39,5 +37,4 @@ public class Barco extends Veiculos {
     public void pescar(){
         //fazer funcionalidade de pescar
     }
-    
 }

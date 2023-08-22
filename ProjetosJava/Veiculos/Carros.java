@@ -1,9 +1,10 @@
 package ProjetosJava.Veiculos;
-
+import java.util.Random;
 public class Carros extends Veiculos {
     private int portas;
     private String hetsed;
     private float zerocem;
+    Random random = new Random();
     public Carros(int vel, String nome, String marca, String cor, int rodas, int portas, String hetsed, float zerocem) {
         super(vel, nome, marca, cor, rodas);
         this.portas = portas;
@@ -35,9 +36,5 @@ public class Carros extends Veiculos {
         System.out.printf("Estilo: %s%n",this.hetsed);
         System.out.printf("De zero a Cem: %.2f segundos%n",this.zerocem);
         System.out.println("---------------------------");
-    }
-    @Override
-    public void corrida(){
-        //fazer funcionalidade multiplayer
     }
 }
