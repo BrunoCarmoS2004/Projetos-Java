@@ -5,13 +5,13 @@ import java.util.Random;
 public class TelaMainVeic {
     public static void main(String[] args) {
 
-        /*Os vetores nos objetos NÃO foram feitos com base em códigos prontos de inteligencia artificiais, quando eu li o desafio um tempo depois eu pensei em vetores nos objetos, (vetores a gente ja aprendeu e objetos tbm) agora só precisava juntar os dois, então vi esse video. 
+        /*Professor os vetores nos objetos NÃO foram feitos com base em códigos prontos de inteligencia artificiais, quando eu li o desafio um tempo depois eu pensei em vetores nos objetos, (vetores a gente ja aprendeu e objetos tbm) agora só precisava juntar os dois, então vi esse video. 
 
         https://www.youtube.com/watch?v=Y3wcF_Sobrk 
         
         Adaptei TOTALMENTE para meu código, se vc não considerar isso, pelo menos considere que antes de ter o vetor eu ja tinha feito TUDO do jeito padrão sem vetor
         
-        As funcionalidades de Corrida, Voar, Pescar não estão nas classes por que ainda não descobri/não tive tempo de como chamar o objeto VETOR da main nas classes*/
+        As funcionalidades de Corrida, Voar, Pescar não estão nas classes por que ainda não descobri/não tive tempo como chamar o objeto VETOR da main nas classes*/
 
         Scanner scanner = new Scanner(System.in);
         int i= 0, escolha1 = 5, escolha2 = 5, escolha3 = 5, respVel, respRodas, respPortas, respHetsed, respBool, respTam, respAsas, respLugares, respTamVet, corridaVel = 0, n=1, corridaAleat, respCidade, respId, respCapacidade = 0, dinheiro = 0, numPeixes = 0, qtdPeixes =0, pescaAleat;
