@@ -5,12 +5,14 @@ public class Carros extends Veiculos {
     private String hetsed;
     private float zerocem;
     Random random = new Random();
+
     public Carros(int vel, String nome, String marca, String cor, int rodas, int portas, String hetsed, float zerocem) {
         super(vel, nome, marca, cor, rodas);
         this.portas = portas;
         this.hetsed= hetsed;
         this.zerocem = zerocem;
     }
+    
     public int getPortas() {
         return portas;
     }

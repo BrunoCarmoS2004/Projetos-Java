@@ -27,6 +27,7 @@ public class Veiculos {
         this.marca = marca;
         this.cor = cor;
     }
+    
     public int getVel() {
         return vel;
     }

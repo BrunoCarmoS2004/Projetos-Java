@@ -11,9 +11,7 @@ public class TelaMainVeic {
         
         Adaptei TOTALMENTE para meu código, se vc não considerar isso, pelo menos considere que antes de ter o vetor eu ja tinha feito TUDO do jeito padrão sem vetor
         
-         As funcionalidades de Corrida, Voar, Pescar não estão nas classes por que ainda não descobri/não tive tempo de como chamar o objeto VETOR da main nas classes*/
-
-
+        As funcionalidades de Corrida, Voar, Pescar não estão nas classes por que ainda não descobri/não tive tempo de como chamar o objeto VETOR da main nas classes*/
 
         Scanner scanner = new Scanner(System.in);
         int i= 0, escolha1 = 5, escolha2 = 5, escolha3 = 5, respVel, respRodas, respPortas, respHetsed, respBool, respTam, respAsas, respLugares, respTamVet, corridaVel = 0, n=1, corridaAleat, respCidade, respId, respCapacidade = 0, dinheiro = 0, numPeixes = 0, qtdPeixes =0, pescaAleat;
@@ -35,6 +33,7 @@ public class TelaMainVeic {
             +"0 - Sair\n"
             +"---------------------");
             escolha1 = scanner.nextInt();
+
             switch(escolha1){
 //Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro//Carro
                 case 1:
@@ -115,6 +114,7 @@ public class TelaMainVeic {
                         }
                     }   
                 break;
+
 //AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO//AVIÃO
                 case 2:
                     //AVIÃO
@@ -222,6 +222,7 @@ public class TelaMainVeic {
                             }
                         }   
                     break;
+
                 case 3:
 //Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco//Barco
                     System.out.println("Digite a quantidade de barcos que deseja adicionar");

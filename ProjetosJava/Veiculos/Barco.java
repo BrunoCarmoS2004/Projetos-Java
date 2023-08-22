@@ -3,12 +3,14 @@ package ProjetosJava.Veiculos;
 public class Barco extends Veiculos {
     private int capacidade, dinheiro;
     private boolean motorTipo;
+    
     public Barco(int vel, int tamanho, String nome, String cor, int capacidade, boolean motorTipo, int dinheiro) {
         super(vel, tamanho, nome, cor);
         this.capacidade=capacidade;
         this.motorTipo=motorTipo;
         this.dinheiro=dinheiro;
     }
+
     public int getCapacidade() {
         return capacidade;
     }

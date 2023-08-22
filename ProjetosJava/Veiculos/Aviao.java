@@ -7,12 +7,7 @@ public class Aviao extends Veiculos{
     private int asas, lugares, gasolina, pessoas;
     private float maxAltura;
     private boolean motorTipo;
-   
 
-    
-    
-    
-    //int randomNumber = new Random().nextInt(151) + 100;
     public Aviao(int vel, int tamanho, String nome, String cor, boolean motorTipo, int asas, int lugares, float maxAltura) {
         super(vel, tamanho, nome, cor);
         this.asas=asas;
@@ -22,6 +17,7 @@ public class Aviao extends Veiculos{
         this.gasolina = random.nextInt(65) + 250;
         this.pessoas = random.nextInt(this.lugares);
     }
+    
     public int getAsas() {
         return asas;
     }
