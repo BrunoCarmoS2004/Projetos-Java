@@ -1,27 +1,33 @@
 package ProjetosJava.ProjetoLanchonete;
 
-public class cliente {
-    private int celular;
+public class cliente extends pessoa{
+    private String celular;
     private String endereco;
-    public cliente(int celular, String endereco) {
-        this.celular = celular;
-        this.endereco = endereco;
-    }
-    public int getCelular() {
-        return celular;
-    }
-    public void setCelular(int celular) {
-        this.celular = celular;
-    }
-    public String getEndereco() {
-        return endereco;
-    }
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-    @Override
-    public void fazerPedido(pessoa pessoa, lanche lanche){
-        System.out.println("oi");
+
+    public cliente(String nome, String celular, String endereco) {
+            super(nome);
+            this.celular = celular;
+            this.endereco = endereco;
     }
 
+    public String getCelular() {
+            return celular;
+    }
+
+    public void setCelular(String celular) {
+            this.celular = celular;
+    }
+
+    public String getEndereco() {
+            return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+            this.endereco = endereco;
+    }
+
+    @Override
+    public void fazerPedido(pessoa pessoa, lanche lanche) {
+            System.out.println("O pedido está sendo feito");
+    }
 }

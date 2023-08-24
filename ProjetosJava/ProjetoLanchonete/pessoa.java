@@ -1,6 +1,6 @@
 package ProjetosJava.ProjetoLanchonete;
 
-public class pessoa {
+public abstract class pessoa {
     private String nome;
 
     public pessoa(String nome) {
@@ -14,9 +14,6 @@ public class pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    public void azerPedido(pessoa pessoa, lanche lanche){
-        System.out.println();
-    }
 
+    public abstract void fazerPedido(pessoa pessoa, lanche lanche);
 }

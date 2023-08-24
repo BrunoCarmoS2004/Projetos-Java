@@ -1,6 +1,5 @@
 package ProjetosJava.ProjetoLanchonete;
 
-import javax.sound.sampled.SourceDataLine;
 
 public class Executor {
     public static void main(String[] args) {
