@@ -1,5 +1,5 @@
 # Projetos com Java
 
-## Ultimo trabalho: Veiculos
+## Ultimo trabalho: ProjetoLanchonete
 
-### **Pode explorar outros códigos**
+### Primeiro projeto: Calculadora
