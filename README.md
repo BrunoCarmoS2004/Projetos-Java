@@ -1,4 +1,4 @@
-# Projetos com Java
+# Projetos Java
 
 ## Ultimo Trabalho: ProjetoLanchonete
 
