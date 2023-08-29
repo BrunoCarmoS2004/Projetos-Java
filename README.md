@@ -1,5 +1,4 @@
-# ProjetosJava
-## Para poder acessar o trabalho -> ProjetosJava.
+# Projetos com Java
 
 ## Ultimo trabalho: Veiculos
 
