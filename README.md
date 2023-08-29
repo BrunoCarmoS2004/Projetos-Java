@@ -1,5 +1,7 @@
 # Projetos com Java
 
-## Ultimo trabalho: ProjetoLanchonete
+## Ultimo Trabalho: ProjetoLanchonete
 
-### Primeiro projeto: Calculadora
+### Primeiro Projeto: Calculadora
+
+### Projetos Futuros: API
