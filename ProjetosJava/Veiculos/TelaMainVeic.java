@@ -5,7 +5,7 @@ import java.util.Random;
 public class TelaMainVeic {
     public static void main(String[] args) {
 
-        /*Professor os vetores nos objetos NÃO foram feitos com base em códigos prontos de inteligencia artificiais, quando eu li o desafio um tempo depois eu pensei em vetores nos objetos, (vetores a gente ja aprendeu e objetos tbm) agora só precisava juntar os dois, então vi esse video. 
+        /*Professor ja que você especificou que não pode usar outas coisas fora do que foi explicado na aula, os vetores nos objetos NÃO foram feitos com base em códigos prontos de inteligencia artificiais, quando eu li o desafio um tempo depois eu pensei em vetores nos objetos, (vetores a gente ja aprendeu e objetos tbm) agora só precisava juntar os dois, então vi esse video. 
 
         https://www.youtube.com/watch?v=Y3wcF_Sobrk 
         
