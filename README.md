@@ -1,6 +1,6 @@
 # Projetos Java
 
-## Ultimo Trabalho: ProjetoLanchonete
+## Ultimo Trabalho: Projeto_Banco
 
 ### Primeiro Projeto: Calculadora
 
