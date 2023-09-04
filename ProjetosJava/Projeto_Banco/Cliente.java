@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Cliente implements Pessoa{
     Random ramdom = new Random();
     Scanner scanner = new Scanner(System.in);
-    int id =0, cpf=0, numConta = 0, agencia=0, banco=0;
+    int id =0, cpf=0, numConta = 0, agencia=0, banco=0, c;
     String senha="", nome="", n = "";
     float saldo = 0, debito = 0, investimento = 0, tota_inves=0;
     
 
-    public Cliente(int cpf,  String senha, String nome, float saldo) {
+    public Cliente(int cpf,  String senha, String nome) {
         this.id = ramdom.nextInt(1000)+999;
         this.numConta = ramdom.nextInt(10000)+9999;
         this.agencia = ramdom.nextInt(1000)+999;
@@ -19,7 +19,7 @@ public class Cliente implements Pessoa{
         this.cpf = cpf;
         this.senha = senha;
         this.nome = nome;
-        this.saldo = saldo;
+        this.saldo = getSaldo();
         this.investimento = getInvestimento();
     }
 
@@ -81,7 +81,7 @@ public class Cliente implements Pessoa{
 
     @Override
     public void info(){
-        System.out.println(this.nome+"\n");
+        System.out.println("---->"+this.nome+"<----\n");
         System.out.printf("Agencia %d ° Conta %d\n",this.agencia, this.numConta);
         System.out.printf("Banco %d ° Banco C-137 S.A\n",this.banco);
     }
@@ -91,6 +91,10 @@ public class Cliente implements Pessoa{
         System.out.printf("Valor investido: %f\n",investimento);
         System.out.printf("Total ganho com investimentos: %d\n",this.tota_inves);
 
+    }
+    @Override
+    public String toString() {
+        return nome + "\n";
     }
 
     public float getInvestimento() {
@@ -108,6 +112,8 @@ public class Cliente implements Pessoa{
     public void setTota_inves(float tota_inves) {
         this.tota_inves = tota_inves;
     }
+
+    
 
     
     

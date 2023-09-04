@@ -2,19 +2,19 @@ package ProjetosJava.ProjetoLanchonete;
 
 
 public class Pedido {
-    private cliente cliente;
+    private Cliente cliente;
     private Lanche lanche;
-    
-    public Pedido(cliente cliente, Lanche lanche) {
+
+    public Pedido(Cliente cliente, Lanche lanche) {
         this.cliente = cliente;
         this.lanche = lanche;
     }
 
-    public cliente getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(cliente cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
@@ -24,5 +24,9 @@ public class Pedido {
 
     public void setLanche(Lanche lanche) {
         this.lanche = lanche;
+    }
+    public void info(){
+        System.out.println(cliente);
+        System.out.println(lanche);
     }
 }

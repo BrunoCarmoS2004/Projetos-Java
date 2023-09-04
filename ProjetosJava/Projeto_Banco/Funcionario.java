@@ -58,7 +58,8 @@ public class Funcionario implements Pessoa {
 
     @Override
     public void info() {
-        // TODO Auto-generated method stub
+        System.out.printf("Funcionario %d\n",this.id);
+        System.out.printf("Nome %s ° CPF %d\n", this.nome, this.cpf);
         
     }
 }
