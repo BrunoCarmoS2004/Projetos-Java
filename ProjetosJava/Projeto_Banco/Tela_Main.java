@@ -12,7 +12,7 @@ public class Tela_Main {
         cliente.criarCliente(numClientes);
         //cliente.mostrarClientes();
         System.out.println(cliente.cli.get(0).getNome());
-        cliente.cli.get(0).info();
+        
         */
 
         System.out.println("BEM VINDO AO BANCO C-137\n");
@@ -54,7 +54,7 @@ public class Tela_Main {
                 break; 
             }
         }
-
+        cliente.cli.get(0).info();
         
     }
 }

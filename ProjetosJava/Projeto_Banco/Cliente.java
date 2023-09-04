@@ -81,7 +81,7 @@ public class Cliente implements Pessoa{
 
     @Override
     public void info(){
-        System.out.println("---->"+this.nome+"<----\n");
+        System.out.print("---->"+this.nome+" ID "+this.id+"<----\n");
         System.out.printf("Agencia %d ° Conta %d\n",this.agencia, this.numConta);
         System.out.printf("Banco %d ° Banco C-137 S.A\n",this.banco);
     }
