@@ -1,23 +1,23 @@
 package ProjetosJava.ProjetoLanchonete;
 
-public class lanchonete {
+public class Lanchonete {
    private String local;
    private String nome;
-   private lanche [] cardapio;
+   private Lanche [] cardapio;
    
-    public lanchonete(String local, String nome, lanche[] cardapio) {
+    public Lanchonete(String local, String nome, Lanche[] cardapio) {
         this.local = local;
         this.nome = nome;
         this.cardapio = cardapio;
     }
-    public lanchonete(String local, lanche[] cardapio) {
+    public Lanchonete(String local, Lanche[] cardapio) {
         this.local = local;
         this.cardapio = cardapio;
     }
-    public lanchonete(String local,String nome, int capacidade) {
+    public Lanchonete(String local,String nome, int capacidade) {
         this.local = local;
         this.nome = nome;
-        this.cardapio = new lanche[capacidade];
+        this.cardapio = new Lanche[capacidade];
     } 
 
     public void exibirCardapio(){

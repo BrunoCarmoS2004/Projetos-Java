@@ -1,9 +1,9 @@
 package ProjetosJava.ProjetoLanchonete;
 
-public abstract class pessoa {
+public abstract class Pessoa {
     private String nome;
 
-    public pessoa(String nome) {
+    public Pessoa(String nome) {
         this.nome = nome;
     }
 
@@ -15,5 +15,5 @@ public abstract class pessoa {
         this.nome = nome;
     }
 
-    public abstract void fazerPedido(pessoa pessoa, lanche lanche);
+    public abstract void fazerPedido(Pessoa pessoa, Lanche lanche);
 }

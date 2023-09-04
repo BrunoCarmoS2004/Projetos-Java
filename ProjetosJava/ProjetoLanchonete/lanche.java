@@ -1,9 +1,9 @@
 package ProjetosJava.ProjetoLanchonete;
 
-public class lanche {
+public class Lanche {
     private String nome;
     private double preco;
-    public lanche(String nome, double preco) {
+    public Lanche(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
     }

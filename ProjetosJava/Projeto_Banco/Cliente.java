@@ -1,3 +1,5 @@
+package ProjetosJava.Projeto_Banco;
+
 import java.util.Random;
 import java.util.Scanner;
 

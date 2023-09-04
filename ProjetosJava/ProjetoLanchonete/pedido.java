@@ -1,11 +1,11 @@
 package ProjetosJava.ProjetoLanchonete;
 
 
-public class pedido {
+public class Pedido {
     private cliente cliente;
-    private lanche lanche;
+    private Lanche lanche;
     
-    public pedido(cliente cliente, lanche lanche) {
+    public Pedido(cliente cliente, Lanche lanche) {
         this.cliente = cliente;
         this.lanche = lanche;
     }
@@ -18,11 +18,11 @@ public class pedido {
         this.cliente = cliente;
     }
 
-    public lanche getLanche() {
+    public Lanche getLanche() {
         return lanche;
     }
 
-    public void setLanche(lanche lanche) {
+    public void setLanche(Lanche lanche) {
         this.lanche = lanche;
     }
 }

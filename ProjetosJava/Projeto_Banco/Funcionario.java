@@ -1,5 +1,6 @@
+package ProjetosJava.Projeto_Banco;
 import java.util.Random;
-    import java.util.Scanner;
+import java.util.Scanner;
 public class Funcionario implements Pessoa {
     Random ramdom = new Random();
     Scanner scanner = new Scanner(System.in);
