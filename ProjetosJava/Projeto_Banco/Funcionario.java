@@ -2,11 +2,11 @@ package ProjetosJava.Projeto_Banco;
 import java.util.Random;
 import java.util.Scanner;
 public class Funcionario implements Pessoa {
-    Random ramdom = new Random();
-    Scanner scanner = new Scanner(System.in);
+    private Random ramdom = new Random();
+    private Scanner scanner = new Scanner(System.in);
 
-    int id =0, cpf=0;
-    String senha="", nome="", n = "";
+    private int id =0, cpf=0;
+    private String senha="", nome="", n = "";
     
 
     public Funcionario(int cpf,  String senha, String nome) {
@@ -28,14 +28,12 @@ public class Funcionario implements Pessoa {
 
     @Override
     public void setSenha() {
-        while(n.length()<3){
+        while(this.senha.length()<3){
             System.out.println("Digite a sua senha");
             System.out.print("Resposta: ");
-                n = scanner.next();
-            if (n.length()<3){
+            this.senha = scanner.next();
+            if (this.senha.length()<3){
                 System.out.println("Senha muito pequena");
-            }else{
-                this.senha = n;
             }
         }
     }

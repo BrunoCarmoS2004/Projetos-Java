@@ -4,11 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Cliente implements Pessoa{
-    Random ramdom = new Random();
-    Scanner scanner = new Scanner(System.in);
-    int id =0, cpf=0, numConta = 0, agencia=0, banco=0, c;
-    String senha="", nome="", n = "";
-    float saldo = 0, debito = 0, investimento = 0, tota_inves=0;
+    private Random ramdom = new Random();
+    private Scanner scanner = new Scanner(System.in);
+    private int id =0, cpf=0, numConta = 0, agencia=0, banco=0, c;
+    private String senha="", nome="", n = "";
+    private float saldo = 0, debito = 0, investimento = 0, tota_inves=0;
     
 
     public Cliente(int cpf,  String senha, String nome) {

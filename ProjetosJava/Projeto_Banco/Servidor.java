@@ -8,13 +8,14 @@ public class Servidor {
     ArrayList<Funcionario> fun = new ArrayList<Funcionario>();
     Scanner scanner = new Scanner(System.in);
 
-    int respCpf, i, c, numClientes, qtdClientes;
-    String respNome, respSenha, perfSenha = "";
+    private int respCpf, i, c, numClientes, qtdClientes;
+    private String respNome, respSenha = "";
     
     
     
     public void criarCliente(int qtdClientes){
-            if (numClientes == 0){
+            respSenha = "";
+            if (qtdClientes == 0){
                 System.out.println("Não tem conta?\n");
                 System.out.println("É simples e fácil criar uma!\n");
                 System.out.println("Vamos começar!\n");
@@ -40,14 +41,12 @@ public class Servidor {
             System.out.print("Resposta: ");
             scanner.next();
             System.out.println("Por fim digite sua incrivel senha!");
-            while(perfSenha.length()<3){
+            while(respSenha.length()<3){
                 System.out.println("Digite a sua senha");
                 System.out.print("Resposta: ");
-                perfSenha = scanner.next();
-                if (perfSenha.length()<3){
+                respSenha = scanner.next();
+                if (respSenha.length()<3){
                     System.out.println("Senha muito pequena\n");
-                }else{
-                    respSenha = perfSenha;
                 }
         }
         System.out.println("Terminamos por aqui...\n");
@@ -59,6 +58,7 @@ public class Servidor {
         }
     public void mostrarClientes(){
             System.out.println("Aqui estão os clientes cadastrados");
+            c = 0;
             for (Cliente i : cli) {
                 System.out.println();
                 System.out.print(c +" - " +i);
@@ -69,33 +69,35 @@ public class Servidor {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void criarFuncionario(int numClientes){
-        System.out.println("Funcionario novo?\n");
-        System.out.println("Vamos cadastralo!\n");
-        System.out.println("Por favor digite o nome COMPLETO:");
-        System.out.print("Sua resposta: ");
-        respNome = scanner.next();
-        System.out.println();
-        System.out.println("Vou precisar de mais algumas informações por segurança\n");
-        System.out.println("Digite seu CPF");
-        System.out.print("Resposta: ");
-        respCpf = scanner.nextInt();
-        System.out.println();
-        System.out.println("Por fim!");
-        while(perfSenha.length()<3){
-            System.out.println("Digite a sua senha");
+    public void criarFuncionario(int qtdFuncionarios){
+        if (qtdClientes == 1){
+            System.out.println("Ja existe funcionario cadastrado!");
+        }else{
+            System.out.println("Funcionario novo?\n");
+            System.out.println("Vamos cadastralo!\n");
+            System.out.println("Por favor digite o nome COMPLETO:");
+            System.out.print("Sua resposta: ");
+            respNome = scanner.next();
+            System.out.println();
+            System.out.println("Vou precisar de mais algumas informações por segurança\n");
+            System.out.println("Digite seu CPF");
             System.out.print("Resposta: ");
-            perfSenha = scanner.next();
-            if (perfSenha.length()<3){
-                System.out.println("Senha muito pequena\n");
-            }else{
-                respSenha = perfSenha;
+            respCpf = scanner.nextInt();
+            System.out.println();
+            System.out.println("Por fim!");
+            while(respSenha.length()<3){
+                System.out.println("Digite a sua senha");
+                System.out.print("Resposta: ");
+                respSenha = scanner.next();
+                if (respSenha.length()<3){
+                    System.out.println("Senha muito pequena\n");
+                }
             }
+            System.out.println("Agora você é um Funcionario cadastrado...\n");
+            System.out.println("Algumas dessas informações poderam ser mudadas");
+            System.out.println();
+            Funcionario cliente = new Funcionario(respCpf, respSenha, respNome);
         }
-        System.out.println("Agora você é um Funcionario cadastrado...\n");
-        System.out.println("Algumas dessas informações poderam ser mudadas");
-        System.out.println();
-        Funcionario cliente = new Funcionario(respCpf, respSenha, respNome);
     }
 
 
@@ -115,7 +117,7 @@ public class Servidor {
             while(true){
                 System.out.println("Digite sua senha");
                 String senhaLogin = scanner.next();
-                if(senhaLogin == cli.get(numClientes).getSenha()){
+                if(senhaLogin.equals(cli.get(numClientes).getSenha())){
                     break;
                 }else{
                     System.out.println("Senha invalida");
@@ -126,7 +128,27 @@ public class Servidor {
     }
 
     public void loginFuncionario(){
-        
+        while(true){
+            while(true){
+                System.out.println("Digite seu CPF ou seu ID");
+                int cpfIdLogin = scanner.nextInt();
+                if(cpfIdLogin == fun.get(0).getId()||cpfIdLogin == fun.get(0).getCpf()){
+                    break;
+                }else{
+                    System.out.println("Id ou Cpf invalido");
+                }
+            }
+            while(true){
+                System.out.println("Digite sua senha");
+                String senhaLogin = scanner.next();
+                if(senhaLogin.equals(fun.get(0).getSenha())){
+                    break;
+                }else{
+                    System.out.println("Senha invalida");
+                }
+            }
+            break;
+        }
     }
 
 }
