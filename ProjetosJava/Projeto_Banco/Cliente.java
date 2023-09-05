@@ -25,7 +25,7 @@ public class Cliente implements Pessoa{
 
     @Override
     public int getId() {
-        return id;
+        return this.id;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Cliente implements Pessoa{
     }
 
     public int getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
     public void setCpf(int cpf) {
@@ -56,7 +56,7 @@ public class Cliente implements Pessoa{
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -64,7 +64,7 @@ public class Cliente implements Pessoa{
     }
 
     public float getSaldo() {
-        return saldo;
+        return this.saldo;
     }
 
     public void setSaldo(float saldo) {
@@ -72,7 +72,7 @@ public class Cliente implements Pessoa{
     }
 
     public float getDebito() {
-        return debito;
+        return this.debito;
     }
 
     public void setDebito(float debito) {
@@ -84,6 +84,7 @@ public class Cliente implements Pessoa{
         System.out.print("---->"+this.nome+" ID "+this.id+"<----\n");
         System.out.printf("Agencia %d ° Conta %d\n",this.agencia, this.numConta);
         System.out.printf("Banco %d ° Banco C-137 S.A\n",this.banco);
+        System.out.println();
     }
     public void dinheiro(){
         System.out.printf("Saldo: %f\n", this.saldo);
@@ -98,7 +99,7 @@ public class Cliente implements Pessoa{
     }
 
     public float getInvestimento() {
-        return investimento;
+        return this.investimento;
     }
 
     public void setInvestimento(float investimento) {
@@ -106,7 +107,7 @@ public class Cliente implements Pessoa{
     }
 
     public float getTota_inves() {
-        return tota_inves;
+        return this.tota_inves;
     }
 
     public void setTota_inves(float tota_inves) {

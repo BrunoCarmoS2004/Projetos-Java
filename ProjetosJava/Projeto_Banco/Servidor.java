@@ -1,17 +1,19 @@
 package ProjetosJava.Projeto_Banco;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.swing.text.AbstractDocument.BranchElement;
 public class Servidor {
     ArrayList<Cliente> cli = new ArrayList<Cliente>();
     ArrayList<Funcionario> fun = new ArrayList<Funcionario>();
     Scanner scanner = new Scanner(System.in);
 
-    int respCpf, i, c, numClientes;
+    int respCpf, i, c, numClientes, qtdClientes;
     String respNome, respSenha, perfSenha = "";
     
     
     
-    public void criarCliente(int numClientes){
+    public void criarCliente(int qtdClientes){
             if (numClientes == 0){
                 System.out.println("Não tem conta?\n");
                 System.out.println("É simples e fácil criar uma!\n");
@@ -58,10 +60,10 @@ public class Servidor {
     public void mostrarClientes(){
             System.out.println("Aqui estão os clientes cadastrados");
             for (Cliente i : cli) {
-                System.out.print("Numero do cliente "+i+ " é "+ c);
+                System.out.println();
+                System.out.print(c +" - " +i);
                 System.out.println();
                 c++;
-
             }   
         }
 
@@ -99,8 +101,28 @@ public class Servidor {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void loginCliente(){
-        
+    public void loginCliente(int numClientes){
+        while(true){
+            while(true){
+                System.out.println("Digite seu CPF ou seu ID");
+                int cpfIdLogin = scanner.nextInt();
+                if(cpfIdLogin == cli.get(numClientes).getId()||cpfIdLogin == cli.get(numClientes).getCpf()){
+                    break;
+                }else{
+                    System.out.println("Id ou Cpf invalido");
+                }
+            }
+            while(true){
+                System.out.println("Digite sua senha");
+                String senhaLogin = scanner.next();
+                if(senhaLogin == cli.get(numClientes).getSenha()){
+                    break;
+                }else{
+                    System.out.println("Senha invalida");
+                }
+            }
+            break;
+        }
     }
 
     public void loginFuncionario(){

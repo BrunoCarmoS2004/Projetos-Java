@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Tela_Main {
     public static void main(String[] args) {
-        int numClientes = 0, respIncio = 1;
+        int qtdClientes = 0, respIncio = 1, numClientes;
         Scanner scanner = new Scanner(System.in);
         Servidor cliente = new Servidor();
+        Servidor funcionario = new Servidor();
         /*
         
         cliente.criarCliente(numClientes);
@@ -36,7 +37,16 @@ public class Tela_Main {
             }
             switch(respIncio){
                 case 1:
-                    //login Cliente
+                    while(true){
+                        if(qtdClientes == 0){
+                            System.out.println("Não há clientes cadastrados!");
+                            break;
+                        }
+                        System.out.println("Escolha um");
+                        cliente.mostrarClientes();
+                        numClientes = scanner.nextInt();
+                        cliente.loginCliente(numClientes);
+                    }
                 break;
                 
                 case 2:
@@ -44,12 +54,12 @@ public class Tela_Main {
                 break;
     
                 case 3:
-                    cliente.criarCliente(numClientes);
-                    respIncio = 0;
+                    cliente.criarCliente(qtdClientes);
+                    qtdClientes++;
                 break;
     
                 case 4:
-                    cliente.criarFuncionario(numClientes);
+                    funcionario.criarFuncionario(qtdClientes);
                     respIncio = 0;
                 break; 
             }
