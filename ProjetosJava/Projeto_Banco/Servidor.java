@@ -30,16 +30,6 @@ public class Servidor {
             System.out.print("Resposta: ");
             respCpf = scanner.nextInt();
             System.out.println();
-            System.out.println("Digite sua data de nascimento");
-            System.out.print("Resposta: ");
-            scanner.next();
-            System.out.println();
-            System.out.println("Digite o nome da sua mãe");
-            System.out.print("Resposta: ");
-            scanner.next();
-            System.out.println("Digite o nome do seu pai");
-            System.out.print("Resposta: ");
-            scanner.next();
             System.out.println("Por fim digite sua incrivel senha!");
             while(respSenha.length()<3){
                 System.out.println("Digite a sua senha");
@@ -58,7 +48,7 @@ public class Servidor {
         }
     public void mostrarClientes(){
             System.out.println("Aqui estão os clientes cadastrados");
-            c = 0;
+            c = 1;
             for (Cliente i : cli) {
                 System.out.println();
                 System.out.print(c +" - " +i);
@@ -148,6 +138,63 @@ public class Servidor {
                 }
             }
             break;
+        }
+    }
+
+    public void depositar(float dinheiro, int numClientes){
+        cli.get(numClientes).setSaldo(cli.get(numClientes).getSaldo() + dinheiro);
+        System.out.println("Seu saldo algora é de: R$" + cli.get(numClientes).getSaldo());
+    }
+
+    public void sacar(float dinheiro, int numClientes){
+        if (cli.get(numClientes).getSaldo() < dinheiro){
+            System.out.println("Saldo insuficiente");
+            
+        }else{
+            cli.get(numClientes).setSaldo(cli.get(numClientes).getSaldo() - dinheiro);
+            System.out.println("Seu novo saldo algora é de: R$" + cli.get(numClientes).getSaldo());
+            
+        }
+    }
+
+    public void pagarConta(float dinheiro, int numClientes){
+        if (cli.get(numClientes).getSaldo() < dinheiro){
+            float aaa = cli.get(numClientes).getSaldo();
+            float aaa2 = 0f;
+            for (int i = 0 ;aaa < dinheiro; dinheiro--) {
+                aaa2++;
+            }
+            cli.get(numClientes).setSaldo(0);
+            cli.get(numClientes).setDebito(cli.get(numClientes).getDebito()+aaa2);
+            System.out.println("Sua conta foi paga!");
+            System.out.println("Porém, seu saldo não era o suficiente, então o restante que faltou virou créditos para pagar");
+            System.out.println("O valor a pagar dos créditos é R$" + cli.get(numClientes).getDebito());
+        }else{
+            cli.get(numClientes).setSaldo(cli.get(numClientes).getSaldo() - dinheiro);
+            System.out.println("Sua conta foi paga!");
+            System.out.println("E seu novo saldo algora é de: R$" + cli.get(numClientes).getSaldo());
+        }
+    }
+
+    public void verPagarCreditos(int numClientes){
+        System.out.println("Seu debito pendente é " + cli.get(numClientes).getDebito());
+        while(true){
+            float saldo = cli.get(numClientes).getSaldo(), debito = cli.get(numClientes).getDebito();
+            int escolha = 1;
+            System.out.println("Deseja pagar agora? 1-Sim 2-não");
+            escolha = scanner.nextInt();
+            if(escolha == 2){
+                break;
+            }
+            if(saldo < debito){
+                System.out.println("Saldo insuficiente");
+                break;
+            }else{
+                cli.get(numClientes).setSaldo(saldo - debito);
+                cli.get(numClientes).setDebito(0);
+                System.out.println("Seus débitos foram pagos");
+                break;
+            }
         }
     }
 
