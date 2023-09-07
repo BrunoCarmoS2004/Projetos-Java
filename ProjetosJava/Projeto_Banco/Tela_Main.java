@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Tela_Main {
     public static void main(String[] args) {
-        int qtdClientes = 0, respIncio = 1, numClientes = 0, qtdFuncionarios = 0, numClientes2=numClientes;
+        int qtdClientes = 0, respIncio = 1, numClientes = 1, qtdFuncionarios = 0, numClientes2=numClientes;
         Scanner scanner = new Scanner(System.in);
         Servidor cliente = new Servidor();
         Servidor funcionario = new Servidor();
@@ -46,8 +46,8 @@ public class Tela_Main {
                             System.out.println("Escolha um");
                             cliente.mostrarClientes();
                             numClientes = scanner.nextInt();
-                            numClientes -=1;
-                            cliente.loginCliente(numClientes);
+                            numClientes2 -=1;
+                            cliente.loginCliente(numClientes2);
                         }
                         int tabCliente = 1;
                         System.out.println("\nBem vindo "+cliente.cli.get(numClientes2).getNome());
@@ -91,6 +91,11 @@ public class Tela_Main {
                                 scanner.next();
                             break;
                             case 3:
+                                //sacar
+                                System.out.println("Seu saldo atual é: ");
+                                System.out.println("Saldo: ");
+                                cliente.cli.get(numClientes2).getSaldo();
+                                System.out.println();
                                 System.out.println("Insira o valor para ser sacado: ");
                                 System.out.print("R$ ");
                                 clienteDinheiro = scanner.nextFloat();
@@ -107,7 +112,12 @@ public class Tela_Main {
                                 scanner.next();
                             break;
                             case 5:
-                            //Investir
+                                System.out.println("Insira o valor que você queira investir: ");
+                                System.out.print("R$ ");
+                                clienteDinheiro = scanner.nextFloat();
+                                cliente.investimento(clienteDinheiro, numClientes2);
+                                System.out.println("Digite algo para voltar");
+                                scanner.next();
                             break;
                             case 6:
                             //Pagar creditos
@@ -133,7 +143,52 @@ public class Tela_Main {
                             break;
                         }
                         funcionario.loginFuncionario();
-                        break;
+                        int tabCliente = 1;
+                        System.out.println("\nBem vindo "+funcionario.fun.get(0).getNome());
+                        System.out.println("\nNo nosso sistema você pode fazer:");
+                        while(true){
+                            System.out.println("-----------------------------|\n"
+                            +"| 1 - Ver Clientes Cadastrados|\n"
+                            +"-------------------------------\n"
+                            +"| 2 - Mudar % Investimento    |\n"
+                            +"-------------------------------\n"
+                            +"| 3 - Excluir Cliente         |\n"
+                            +"-------------------------------\n"
+                            +"---------> 0 - VOLTAR <--------\n");
+                            System.out.println("Escolha o que deseja fazer");
+                            System.out.print("Resposta: ");
+                            tabCliente = scanner.nextInt();
+                            if(tabCliente == 0){
+                                break;
+                            }
+                            switch(tabCliente){
+                                case 1:
+                                    funcionario.mostrarClientes();
+                                    System.out.println("Digite algo para voltar");
+                                    scanner.next();
+                                break;
+                                case 2:
+                                    System.out.println("Digite a nova % dos investimentos: ");
+                                    System.out.print("% ");
+                                    float numInvestimento = scanner.nextFloat();
+                                    cliente.setNumInvestimento(numInvestimento);
+                                    System.out.println("Digite algo para voltar");
+                                    scanner.next();
+                                break;
+                                case 3:
+                                    //Excluir cliente
+                                    System.out.println("Digite o numero do cliente para excluir: ");
+                                    System.out.print("Resposta: ");
+                                    int excluirCliente = scanner.nextInt();
+                                    cliente.excluirCliente(excluirCliente);
+                                    System.out.println("Digite algo para voltar");
+                                    scanner.next();
+                                break;
+                            }
+                        }
+                        if(tabCliente == 0){
+                            break;
+                        }
                     }
                 break;
     

@@ -2,14 +2,17 @@ package ProjetosJava.Projeto_Banco;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.text.AbstractDocument.BranchElement;
-public class Servidor {
+
+
+public class Servidor{
     ArrayList<Cliente> cli = new ArrayList<Cliente>();
     ArrayList<Funcionario> fun = new ArrayList<Funcionario>();
     Scanner scanner = new Scanner(System.in);
 
     private int respCpf, i, c, numClientes, qtdClientes;
     private String respNome, respSenha = "";
+    private float totalInvestimento, investimento, numInvestimento = 0.01f;
+    
     
     
     
@@ -60,7 +63,7 @@ public class Servidor {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void criarFuncionario(int qtdFuncionarios){
-        if (qtdClientes == 1){
+        if (qtdFuncionarios == 1){
             System.out.println("Ja existe funcionario cadastrado!");
         }else{
             System.out.println("Funcionario novo?\n");
@@ -86,7 +89,8 @@ public class Servidor {
             System.out.println("Agora você é um Funcionario cadastrado...\n");
             System.out.println("Algumas dessas informações poderam ser mudadas");
             System.out.println();
-            Funcionario cliente = new Funcionario(respCpf, respSenha, respNome);
+            Funcionario funcio = new Funcionario(respCpf, respSenha, respNome);
+            fun.add(funcio);
         }
     }
 
@@ -98,7 +102,7 @@ public class Servidor {
             while(true){
                 System.out.println("Digite seu CPF ou seu ID");
                 int cpfIdLogin = scanner.nextInt();
-                if(cpfIdLogin == cli.get(numClientes).getId()||cpfIdLogin == cli.get(numClientes).getCpf()){
+                if(cpfIdLogin == cli.get(numClientes).getId() || cpfIdLogin == cli.get(numClientes).getCpf()){
                     break;
                 }else{
                     System.out.println("Id ou Cpf invalido");
@@ -122,7 +126,7 @@ public class Servidor {
             while(true){
                 System.out.println("Digite seu CPF ou seu ID");
                 int cpfIdLogin = scanner.nextInt();
-                if(cpfIdLogin == fun.get(0).getId()||cpfIdLogin == fun.get(0).getCpf()){
+                if(cpfIdLogin == fun.get(0).getId() || cpfIdLogin == fun.get(0).getCpf()){
                     break;
                 }else{
                     System.out.println("Id ou Cpf invalido");
@@ -198,4 +202,38 @@ public class Servidor {
         }
     }
 
+    public void investimento(float dinheiro, int numClientes){
+        while(true){
+            if(cli.get(numClientes).getSaldo() == 0 || dinheiro > cli.get(numClientes).getSaldo()){
+                System.out.println("Você não tem saldo para investir");
+                break;
+            }
+                System.out.println("Por quantos meses você deseja investir");
+                int diasInvestidos = scanner.nextInt();
+                totalInvestimento = 1 + numInvestimento;
+                int[] vetorDias = new int[diasInvestidos];
+                for (int i = 0; i < vetorDias.length; i++) {
+                    totalInvestimento *= totalInvestimento;
+                }
+                investimento = dinheiro * totalInvestimento;
+                cli.get(numClientes).setSaldo(investimento);
+                System.out.printf("Você investiu %.2f e deu um total de %.2f", dinheiro, investimento);
+                System.out.println();
+                break;   
+        }
+    }
+
+    public void setNumInvestimento(Float numInvestimento){
+        if(numInvestimento > 1 ){
+            float porcInvestimento = numInvestimento /100;
+            this.numInvestimento = porcInvestimento;
+        }else{
+            this.numInvestimento = numInvestimento;
+        }
+        
+    }
+
+    public void excluirCliente(int numClientes){
+
+    }
 }

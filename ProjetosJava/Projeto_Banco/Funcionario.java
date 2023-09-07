@@ -1,7 +1,7 @@
 package ProjetosJava.Projeto_Banco;
 import java.util.Random;
 import java.util.Scanner;
-public class Funcionario implements Pessoa {
+public class Funcionario extends Pessoa {
     private Random ramdom = new Random();
     private Scanner scanner = new Scanner(System.in);
 
@@ -54,7 +54,7 @@ public class Funcionario implements Pessoa {
         this.nome = nome;
     }
 
-    @Override
+    
     public void info() {
         System.out.printf("Funcionario %d\n",this.id);
         System.out.printf("Nome %s ° CPF %d\n", this.nome, this.cpf);
