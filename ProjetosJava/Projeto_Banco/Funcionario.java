@@ -53,8 +53,7 @@ public class Funcionario extends Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    
+      
     public void info() {
         System.out.printf("Funcionario %d\n",this.id);
         System.out.printf("Nome %s ° CPF %d\n", this.nome, this.cpf);

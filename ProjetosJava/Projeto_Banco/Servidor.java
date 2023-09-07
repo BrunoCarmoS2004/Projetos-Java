@@ -50,8 +50,8 @@ public class Servidor{
             if(qtdClientes == 0){
                 System.out.println("Não há clientes cadastrados");
             }else{
+                c = 0;
                 System.out.println("Aqui estão os clientes cadastrados");
-                c = 1;
                 for (Cliente i : cli) {
                 System.out.println();
                 System.out.print(c +" - " +i);
@@ -248,10 +248,9 @@ public class Servidor{
         int escolha = scanner.nextInt();
         if(escolha == 1){
             cli.get(numClientes).setSenha();
-            System.out.println("Cliente atualizada");
+            System.out.println("Senha atualizada");
         }else{
             System.out.println("Ok...");
         }
     }
-
 }

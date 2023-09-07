@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Tela_Main {
     public static void main(String[] args) {
-        int qtdClientes = 0, respIncio = 1, numClientes = 1, excluirCliente=1, qtdFuncionarios = 0, numClientes2=numClientes;
+        int qtdClientes = 0, respIncio = 1, numClientes = 0, excluirCliente=1, qtdFuncionarios = 0;
         Scanner scanner = new Scanner(System.in);
         Servidor cliente = new Servidor();
         Servidor funcionario = new Servidor();
@@ -45,12 +45,11 @@ public class Tela_Main {
                             System.out.println("Escolha um");
                             cliente.mostrarClientes(qtdClientes);
                             numClientes = scanner.nextInt();
-                            numClientes2 -=1;
-                            cliente.loginCliente(numClientes2);
+                            cliente.loginCliente(numClientes);
                         }
                         int tabCliente = 1;
-                        System.out.println("\nBem vindo "+cliente.cli.get(numClientes2).getNome());
-                        System.out.println("Seu Id de login "+cliente.cli.get(numClientes2).getId());
+                        System.out.println("\nBem vindo "+cliente.cli.get(numClientes).getNome()+"\n");
+                        System.out.println("Seu Id de login "+cliente.cli.get(numClientes).getId());
                         System.out.println("\nNo nosso sistema você pode fazer:");
                         while(true){
                         System.out.println("-----------------------------|\n"
@@ -84,13 +83,13 @@ public class Tela_Main {
                                 System.out.println("Insira o valor para ser depositado: ");
                                 System.out.print("R$ ");
                                 float clienteDinheiro = scanner.nextFloat();
-                                cliente.depositar(clienteDinheiro, numClientes2);
+                                cliente.depositar(clienteDinheiro, numClientes);
                                 System.out.println("Digite algo para voltar");
                                 scanner.next();
                             break;
                             case 2:
                             //ver Saldo
-                                System.out.println("Seu saldo é de R$ "+cliente.cli.get(numClientes2).getSaldo());
+                                System.out.println("Seu saldo é de R$ "+cliente.cli.get(numClientes).getSaldo());
                                 System.out.println("Digite algo para voltar");
                                 scanner.next();
                             break;
@@ -98,7 +97,7 @@ public class Tela_Main {
                                 //sacar
                                 System.out.println("Seu saldo atual é: ");
                                 System.out.println("Saldo: ");
-                                cliente.cli.get(numClientes2).getSaldo();
+                                cliente.cli.get(numClientes).getSaldo();
                                 System.out.println();
                                 System.out.println("Insira o valor para ser sacado: ");
                                 System.out.print("R$ ");
@@ -119,7 +118,7 @@ public class Tela_Main {
                                 System.out.println("Insira o valor que você queira investir: ");
                                 System.out.print("R$ ");
                                 clienteDinheiro = scanner.nextFloat();
-                                cliente.investimento(clienteDinheiro, numClientes2);
+                                cliente.investimento(clienteDinheiro, numClientes);
                                 System.out.println("Digite algo para voltar");
                                 scanner.next();
                             break;
@@ -130,15 +129,15 @@ public class Tela_Main {
                                 scanner.next();
                             break;
                             case 7:
-                                cliente.mudarSenha(numClientes2);
+                                cliente.mudarSenha(numClientes);
                                 System.out.println("Digite algo para voltar");
                                 scanner.next();
                             break;
                             case 8:
-                                System.out.println("Suas informações são:");
-                                cliente.cli.get(numClientes2).info();
-                                System.out.println("Suas informações de Saldo");
-                                cliente.cli.get(numClientes2).dinheiro();
+                                System.out.println("Suas informações são: \n");
+                                cliente.cli.get(numClientes).info();
+                                System.out.println("Suas informações de Saldo \n");
+                                cliente.cli.get(numClientes).dinheiro();
                                 System.out.println("Digite algo para voltar");
                                 scanner.next();
                             break;

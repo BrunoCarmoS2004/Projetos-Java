@@ -7,8 +7,6 @@ public class Pessoa implements Interface{
     private int id, cpf;
     private String senha, nome, n = "";
 
-    
-
     @Override
     public int getId() {
         return this.id;

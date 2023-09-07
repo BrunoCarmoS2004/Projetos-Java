@@ -35,6 +35,7 @@ public class Cliente extends Pessoa{
 
     @Override
     public void setSenha() {
+        this.senha = "";
         while(this.senha.length()<3){
             System.out.println("Digite a sua senha");
             System.out.print("Resposta: ");
@@ -77,18 +78,19 @@ public class Cliente extends Pessoa{
         this.debito = debito;
     }
 
-
     public void info(){
         System.out.print("---->"+this.nome+" ID "+this.id+"<----\n");
         System.out.printf("Agencia %d ° Conta %d\n",this.agencia, this.numConta);
         System.out.printf("Banco %d ° Banco C-137 S.A\n",this.banco);
         System.out.println();
     }
+    
     public void dinheiro(){
         System.out.printf("Saldo: %f\n", this.saldo);
         System.out.printf("Saldo Creditado: %f\n", this.debito);
         System.out.printf("Valor investido: %f\n",investimento);
     }
+    
     @Override
     public String toString() {
         return nome + "\n";
