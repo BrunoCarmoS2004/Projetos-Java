@@ -43,7 +43,7 @@ public class Tela_Main {
                             break;
                         }else if (qtdClientes != 0){
                             System.out.println("Escolha um");
-                            cliente.mostrarClientes();
+                            cliente.mostrarClientes(qtdClientes);
                             numClientes = scanner.nextInt();
                             numClientes2 -=1;
                             cliente.loginCliente(numClientes2);
@@ -176,7 +176,7 @@ public class Tela_Main {
                                 break;
                                 case 3:
                                     //Excluir cliente
-                                    cliente.mostrarClientes();
+                                    cliente.mostrarClientes(qtdClientes);
                                     System.out.println("Digite o numero do cliente para excluir: ");
                                     System.out.print("Resposta: ");
                                     excluirCliente = scanner.nextInt();

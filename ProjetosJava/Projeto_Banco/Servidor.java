@@ -49,7 +49,7 @@ public class Servidor{
         cli.add(cliente);
         
         }
-    public void mostrarClientes(){
+    public void mostrarClientes(int qtdClientes){
             if(qtdClientes == 0){
                 System.out.println("Não há clientes cadastrados");
             }else{
