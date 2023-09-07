@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Tela_Main {
     public static void main(String[] args) {
-        int qtdClientes = 0, respIncio = 1, numClientes = 1, qtdFuncionarios = 0, numClientes2=numClientes;
+        int qtdClientes = 0, respIncio = 1, numClientes = 1, excluirCliente=1, qtdFuncionarios = 0, numClientes2=numClientes;
         Scanner scanner = new Scanner(System.in);
         Servidor cliente = new Servidor();
         Servidor funcionario = new Servidor();
@@ -15,7 +15,6 @@ public class Tela_Main {
         System.out.println(cliente.cli.get(0).getNome());
         
         */
-
         System.out.println("BEM VINDO AO BANCO C-137\n");
         System.out.println("O que deseja fazer?\n");
 
@@ -177,9 +176,11 @@ public class Tela_Main {
                                 break;
                                 case 3:
                                     //Excluir cliente
+                                    cliente.mostrarClientes();
                                     System.out.println("Digite o numero do cliente para excluir: ");
                                     System.out.print("Resposta: ");
-                                    int excluirCliente = scanner.nextInt();
+                                    excluirCliente = scanner.nextInt();
+                                    excluirCliente -=1;
                                     cliente.excluirCliente(excluirCliente);
                                     System.out.println("Digite algo para voltar");
                                     scanner.next();
@@ -200,7 +201,7 @@ public class Tela_Main {
     
                 case 4:
                     //Criar Funcionario
-                    funcionario.criarFuncionario(qtdClientes);
+                    funcionario.criarFuncionario(qtdFuncionarios);
                     qtdFuncionarios++;
                 break; 
             }

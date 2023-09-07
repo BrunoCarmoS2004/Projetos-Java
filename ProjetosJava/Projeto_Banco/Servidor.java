@@ -50,14 +50,19 @@ public class Servidor{
         
         }
     public void mostrarClientes(){
-            System.out.println("Aqui estão os clientes cadastrados");
-            c = 1;
-            for (Cliente i : cli) {
+            if(qtdClientes == 0){
+                System.out.println("Não há clientes cadastrados");
+            }else{
+                System.out.println("Aqui estão os clientes cadastrados");
+                c = 1;
+                for (Cliente i : cli) {
                 System.out.println();
                 System.out.print(c +" - " +i);
                 System.out.println();
                 c++;
-            }   
+                }   
+            }
+            
         }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -234,6 +239,14 @@ public class Servidor{
     }
 
     public void excluirCliente(int numClientes){
-
+        System.out.println("Tem certeza que deseja excluir esse cliente?");
+        System.out.println("1 - SIM, 2 - NÃO");
+        int escolha = scanner.nextInt();
+        if(escolha == 1){
+            cli.remove(numClientes);
+            System.out.println("Cliente removido");
+        }else{
+            System.out.println("Ok...");
+        }
     }
 }
