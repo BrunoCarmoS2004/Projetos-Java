@@ -13,9 +13,6 @@ public class Servidor{
     private String respNome, respSenha = "";
     private float totalInvestimento, investimento, numInvestimento = 0.01f;
     
-    
-    
-    
     public void criarCliente(int qtdClientes){
             respSenha = "";
             if (qtdClientes == 0){
@@ -47,8 +44,8 @@ public class Servidor{
         System.out.println();
         Cliente cliente = new Cliente(respCpf, respSenha, respNome);
         cli.add(cliente);
-        
         }
+
     public void mostrarClientes(int qtdClientes){
             if(qtdClientes == 0){
                 System.out.println("Não há clientes cadastrados");
@@ -64,8 +61,6 @@ public class Servidor{
             }
             
         }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void criarFuncionario(int qtdFuncionarios){
         if (qtdFuncionarios == 1){
@@ -98,9 +93,6 @@ public class Servidor{
             fun.add(funcio);
         }
     }
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void loginCliente(int numClientes){
         while(true){
@@ -249,4 +241,17 @@ public class Servidor{
             System.out.println("Ok...");
         }
     }
+
+    public void mudarSenha(int numClientes){
+        System.out.println("Tem certeza que deseja mudar sua senha?");
+        System.out.println("1 - SIM, 2 - NÃO");
+        int escolha = scanner.nextInt();
+        if(escolha == 1){
+            cli.get(numClientes).setSenha();
+            System.out.println("Cliente atualizada");
+        }else{
+            System.out.println("Ok...");
+        }
+    }
+
 }

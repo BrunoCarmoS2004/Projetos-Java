@@ -50,6 +50,7 @@ public class Tela_Main {
                         }
                         int tabCliente = 1;
                         System.out.println("\nBem vindo "+cliente.cli.get(numClientes2).getNome());
+                        System.out.println("Seu Id de login "+cliente.cli.get(numClientes2).getId());
                         System.out.println("\nNo nosso sistema você pode fazer:");
                         while(true){
                         System.out.println("-----------------------------|\n"
@@ -64,6 +65,10 @@ public class Tela_Main {
                         +"| 5 - Investir               |\n"
                         +"------------------------------\n"
                         +"| 6 - Pagar Créditos         |\n"
+                        +"------------------------------\n"
+                        +"| 7 - Mudar Senha            |\n"
+                        +"------------------------------\n"
+                        +"| 8 - Ver Suas informações   |\n"
                         +"------------------------------\n"
                         +"---------> 0 - VOLTAR <---------\n");
                         System.out.println("Escolha o que deseja fazer");
@@ -124,6 +129,19 @@ public class Tela_Main {
                                 System.out.println("Digite algo para voltar");
                                 scanner.next();
                             break;
+                            case 7:
+                                cliente.mudarSenha(numClientes2);
+                                System.out.println("Digite algo para voltar");
+                                scanner.next();
+                            break;
+                            case 8:
+                                System.out.println("Suas informações são:");
+                                cliente.cli.get(numClientes2).info();
+                                System.out.println("Suas informações de Saldo");
+                                cliente.cli.get(numClientes2).dinheiro();
+                                System.out.println("Digite algo para voltar");
+                                scanner.next();
+                            break;
                         }
                     }
                     if(tabCliente == 0){
@@ -162,7 +180,7 @@ public class Tela_Main {
                             }
                             switch(tabCliente){
                                 case 1:
-                                    funcionario.mostrarClientes();
+                                    funcionario.mostrarClientes(qtdClientes);
                                     System.out.println("Digite algo para voltar");
                                     scanner.next();
                                 break;

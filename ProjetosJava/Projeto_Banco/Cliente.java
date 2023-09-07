@@ -7,8 +7,8 @@ public class Cliente extends Pessoa{
     private Random ramdom = new Random();
     private Scanner scanner = new Scanner(System.in);
     private int id =0, cpf=0, numConta = 0, agencia=0, banco=0, c;
-    private String senha="", nome="", n = "";
-    private float saldo = 0, debito = 0, investimento = 0, tota_inves=0;
+    private String senha="", nome="";
+    private float saldo = 0, debito = 0, investimento = 0;
     
 
     public Cliente(int cpf,  String senha, String nome) {
@@ -88,8 +88,6 @@ public class Cliente extends Pessoa{
         System.out.printf("Saldo: %f\n", this.saldo);
         System.out.printf("Saldo Creditado: %f\n", this.debito);
         System.out.printf("Valor investido: %f\n",investimento);
-        System.out.printf("Total ganho com investimentos: %d\n",this.tota_inves);
-
     }
     @Override
     public String toString() {
@@ -102,18 +100,5 @@ public class Cliente extends Pessoa{
 
     public void setInvestimento(float investimento) {
         this.investimento = investimento;
-    }
-
-    public float getTota_inves() {
-        return this.tota_inves;
-    }
-
-    public void setTota_inves(float tota_inves) {
-        this.tota_inves = tota_inves;
-    }
-
-    
-
-    
-    
+    }   
 }
