@@ -173,7 +173,7 @@ public class Tela_Main {
                             }
                             switch(tabCliente){
                                 case 1:
-                                    funcionario.mostrarClientes(qtdClientes);
+                                    cliente.mostrarClientes(qtdClientes);
                                     System.out.println("Digite algo para voltar");
                                     scanner.next();
                                 break;
