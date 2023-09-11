@@ -2,7 +2,7 @@ package ProjetosJava.Projeto_Banco;
 
 import java.util.Scanner;
 
-public class Pessoa implements Interface{
+abstract class Pessoa implements Interface{
     Scanner scanner = new Scanner(System.in);
     private int id, cpf;
     private String senha, nome, n = "";

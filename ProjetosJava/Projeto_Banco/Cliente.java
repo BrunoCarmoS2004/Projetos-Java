@@ -6,16 +6,17 @@ import java.util.Scanner;
 public class Cliente extends Pessoa{
     private Random ramdom = new Random();
     private Scanner scanner = new Scanner(System.in);
-    private int id =0, cpf=0, numConta = 0, agencia=0, banco=0, c;
+    private int id =0, cpf=0, numConta = 0, agencia=0, banco=0;
     private String senha="", nome="";
     private float saldo = 0, debito = 0, investimento = 0;
     
 
     public Cliente(int cpf,  String senha, String nome) {
+        //Um id com o numero aleatorio para ficar mais realistico
         this.id = ramdom.nextInt(1000)+999;
         this.numConta = ramdom.nextInt(10000)+9999;
-        this.agencia = ramdom.nextInt(1000)+999;
-        this.banco = 0277;
+        this.agencia = 0001;
+        this.banco = 0137;
         this.cpf = cpf;
         this.senha = senha;
         this.nome = nome;
@@ -35,9 +36,10 @@ public class Cliente extends Pessoa{
 
     @Override
     public void setSenha() {
+        //Seta senha com no minimo 3 digitos
         this.senha = "";
         while(this.senha.length()<3){
-            System.out.println("Digite a sua senha");
+            System.out.println("Digite a sua senha com pelo menos 3 digitos");
             System.out.print("Resposta: ");
             this.senha = scanner.next();
             if (this.senha.length()<3){
@@ -52,6 +54,19 @@ public class Cliente extends Pessoa{
 
     public void setCpf(int cpf) {
         this.cpf = cpf;
+        /*
+        Para usar o CPF com o tamanho padrão de CPF, não vou usar por que no momento não precisa e fica complicado para ficar testando
+
+        this.cpf = "";
+        while(this.cpf.length()<11){
+            System.out.println("Digite a sua senha com pelo menos 3 digitos");
+            System.out.print("Resposta: ");
+            this.senha = scanner.next();
+            if (this.senha.length()<11){
+                System.out.println("Senha muito pequena");
+            }
+        }
+        */
     }
 
     public String getNome() {
@@ -93,6 +108,7 @@ public class Cliente extends Pessoa{
     
     @Override
     public String toString() {
+        //Usado no mostrar Cliente
         return nome + "\n";
     }
 
