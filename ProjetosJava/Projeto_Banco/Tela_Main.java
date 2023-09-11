@@ -226,6 +226,7 @@ public class Tela_Main {
                                                 qtdClientes--;
                                                 System.out.println("Digite algo para voltar");
                                                 scanner.next();
+                                                break;
                                             }
                                         }
                                     }
