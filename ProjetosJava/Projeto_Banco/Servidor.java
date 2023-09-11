@@ -6,6 +6,38 @@ import java.util.Scanner;
 public class Servidor {
     /*O ArrayList é usado como um "Vetor melhorado" no meu código ele esta sendo usado para poder criar mais de um cliente sem precisar de um método grande
     por exemplo: Você coloca todas as informações dentro do objeto de cliente e por fim voce cria uma nova partição do ArrayList vai ser criada com todos os valores inseridos no Objeto, como nome, id, senha, etc, usando o nome do arraylist.add(nome do objeto) 
+
+    Em vez de usar algum método parecido com esse:
+
+    Scanner scanner = new Scanner(System.in);
+        int taman = 1, i = 0, k = 0;
+        int[]num1;
+        int[]num1beckUp;
+        num1 = new int[taman];
+        num1beckUp = new int[taman];
+        for (i = 0; i < 4; i++) {
+            System.out.print("Digite um numero: ");
+            num1[i] = scanner.nextInt();
+            num1beckUp[i] = num1[i];
+            taman++;
+            num1 = new int[taman];
+            num1[i] = num1beckUp[i];
+            num1beckUp = new int[taman];
+        }
+        for (i = 0; i < num1.length; i++) {
+            System.out.println(num1[k++]);
+        }
+
+    Podemos usar simplesmente 
+        int num1;
+        ArrayList<> num = new ArrayList<>();
+        System.out.print("Digite um numero: ");
+        num1 = scanner.nextInt();
+        num.add(num1);
+
+        for(i : num){
+            sout(i)
+        }
     */
     ArrayList<Cliente> cli = new ArrayList<Cliente>();
     ArrayList<Funcionario> fun = new ArrayList<Funcionario>();
