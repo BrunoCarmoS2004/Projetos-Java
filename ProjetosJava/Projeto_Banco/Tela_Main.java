@@ -8,13 +8,7 @@ public class Tela_Main {
         Scanner scanner = new Scanner(System.in);
         Servidor cliente = new Servidor();
         Servidor funcionario = new Servidor();
-        /*
-        
-        cliente.criarCliente(numClientes);
-        //cliente.mostrarClientes();
-        System.out.println(cliente.cli.get(0).getNome());
-        
-        */
+
         System.out.println("BEM VINDO AO BANCO C-137\n");
         System.out.println("O que deseja fazer?\n");
 
