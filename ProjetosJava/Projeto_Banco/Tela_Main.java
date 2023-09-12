@@ -6,6 +6,7 @@ public class Tela_Main {
     public static void main(String[] args) {
         int qtdClientes = 0, respIncio = 1, numClientes = 0, excluirCliente = 1, qtdFuncionarios = 0;
         Scanner scanner = new Scanner(System.in);
+        
         Servidor cliente = new Servidor();
         Servidor funcionario = new Servidor();
 
@@ -196,7 +197,7 @@ public class Tela_Main {
                                     cliente.mostrarClientes(qtdClientes);
                                     System.out.println("Digite algo para voltar");
                                     scanner.next();
-                                    break;
+                                break;
                                 case 2:
                                     // Mudar & investimeto
                                     System.out.println("Digite a nova % dos investimentos: ");
